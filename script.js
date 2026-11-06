@@ -69,3 +69,37 @@ if ("IntersectionObserver" in window) {
 } else {
   revealTargets.forEach(element => element.classList.add("is-visible"));
 }
+
+
+// Show the confirmed active academy event on the moving JNA van.
+(() => {
+  const event = window.JNA_EVENT;
+  const track = document.querySelector(".delivery-track");
+  if (!track) return;
+  if (!event || event.active !== true || !event.title) {
+    track.hidden = true;
+    return;
+  }
+  const clean = String(event.title).trim().replace(/\s+/g, " ");
+  const words = clean.split(" ");
+  let first = "";
+  let second = "";
+  for (const word of words) {
+    if ((first + " " + word).trim().length <= 15 || !first) {
+      first = (first + " " + word).trim();
+    } else {
+      second = (second + " " + word).trim();
+    }
+  }
+  const line1 = document.getElementById("van-event-line-1");
+  const line2 = document.getElementById("van-event-line-2");
+  const date = document.getElementById("van-event-date");
+  if (line1) line1.textContent = first.toUpperCase();
+  if (line2) line2.textContent = second.toUpperCase();
+  if (date) date.textContent = event.date ? String(event.date).toUpperCase() : "JNA · EVENT UPDATE";
+  track.hidden = false;
+  track.style.cursor = "pointer";
+  track.addEventListener("click", () => {
+    window.location.href = event.link || "news-events.html";
+  });
+})();
