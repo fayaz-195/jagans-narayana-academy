@@ -197,3 +197,29 @@ body{font-family:"DM Sans",sans-serif;background:#fff;overflow-x:hidden}
  @keyframes vanDrive{from{left:-260px}to{left:100%}}
 }
 @media(prefers-reduced-motion:reduce){.tree-scroll{animation:none!important}.delivery-van{animation:none!important;left:0!important}}
+
+
+/* Synchronize roadside scenery with the van's exact travel cycle */
+.tree-scroll{
+  width:calc(200% + 680px)!important;
+  animation:treesDrift 13s linear infinite!important;
+}
+@keyframes treesDrift{
+  from{transform:translateX(0)}
+  to{transform:translateX(calc(-50%))}
+}
+.delivery-van{
+  animation:vanDrive 13s linear infinite!important;
+}
+@keyframes vanDrive{
+  from{left:-340px}
+  to{left:100%}
+}
+@media(max-width:680px){
+  .tree-scroll{
+    width:calc(200% + 520px)!important;
+    animation-duration:10s!important;
+  }
+  .delivery-van{animation-duration:10s!important}
+  @keyframes vanDrive{from{left:-260px}to{left:100%}}
+}
