@@ -13,3 +13,26 @@ if (menuButton && nav) {
 }
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+document.querySelectorAll(".nav-drop").forEach(button => {
+  button.addEventListener("click", event => {
+    event.stopPropagation();
+    const item = button.closest(".nav-item");
+    const willOpen = !item.classList.contains("open");
+    document.querySelectorAll(".nav-item.open").forEach(openItem => {
+      openItem.classList.remove("open");
+      openItem.querySelector(".nav-drop")?.setAttribute("aria-expanded","false");
+    });
+    if (willOpen) {
+      item.classList.add("open");
+      button.setAttribute("aria-expanded","true");
+    }
+  });
+});
+document.addEventListener("click", event => {
+  if (!event.target.closest(".nav-item")) {
+    document.querySelectorAll(".nav-item.open").forEach(item => {
+      item.classList.remove("open");
+      item.querySelector(".nav-drop")?.setAttribute("aria-expanded","false");
+    });
+  }
+});
