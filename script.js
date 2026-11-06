@@ -71,35 +71,66 @@ if ("IntersectionObserver" in window) {
 }
 
 
-// Show the confirmed active academy event on the moving JNA van.
+// Automatically select today's Indian special day or the next upcoming festival.
 (() => {
-  const event = window.JNA_EVENT;
   const track = document.querySelector(".delivery-track");
   if (!track) return;
-  if (!event || event.active !== true || !event.title) {
-    track.hidden = true;
-    return;
+  const calendar = window.JNA_CALENDAR;
+  if (!calendar) { track.hidden = true; return; }
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(new Date());
+  const part = type => parts.find(item => item.type === type)?.value;
+  const todayKey = part("year") + "-" + part("month") + "-" + part("day");
+  const todayUtc = Date.UTC(Number(part("year")), Number(part("month")) - 1, Number(part("day")));
+  const year = Number(part("year"));
+  const events = [];
+
+  (calendar.annual || []).forEach(([title, monthDay, category]) => {
+    const [month, day] = monthDay.split("-").map(Number);
+    [year, year + 1].forEach(y => {
+      const key = y + "-" + String(month).padStart(2,"0") + "-" + String(day).padStart(2,"0");
+      events.push({title, key, category});
+    });
+  });
+  (calendar.dated || []).forEach(([title, key, category]) => events.push({title, key, category}));
+
+  const candidates = events.map(event => ({
+    ...event,
+    days: Math.round((Date.UTC(...event.key.split("-").map(Number).map((n,i)=>i===1?n-1:n)) - todayUtc) / 86400000)
+  })).filter(event => event.days >= 0 && event.days <= (calendar.showWithinDays || 21))
+    .sort((a,b) => a.days - b.days);
+
+  const chosen = candidates[0];
+  if (!chosen) { track.hidden = true; return; }
+
+  const titleWords = chosen.title.toUpperCase().split(/\\s+/);
+  let line1 = "", line2 = "";
+  titleWords.forEach(word => {
+    if (!line1 || (line1 + " " + word).length <= 15) line1 = (line1 + " " + word).trim();
+    else line2 = (line2 + " " + word).trim();
+  });
+  if (!line2) line2 = chosen.days === 0 ? "TODAY" : chosen.category.toUpperCase();
+
+  const line1El = document.getElementById("van-event-line-1");
+  const line2El = document.getElementById("van-event-line-2");
+  const dateEl = document.getElementById("van-event-date");
+  if (line1El) line1El.textContent = line1;
+  if (line2El) line2El.textContent = line2;
+  if (dateEl) {
+    const readableDate = new Date(chosen.key + "T12:00:00").toLocaleDateString("en-IN", {
+      day:"numeric", month:"short", timeZone:"Asia/Kolkata"
+    }).toUpperCase();
+    dateEl.textContent = chosen.days === 0 ? "TODAY · " + readableDate : "UP NEXT · " + readableDate;
   }
-  const clean = String(event.title).trim().replace(/\s+/g, " ");
-  const words = clean.split(" ");
-  let first = "";
-  let second = "";
-  for (const word of words) {
-    if ((first + " " + word).trim().length <= 15 || !first) {
-      first = (first + " " + word).trim();
-    } else {
-      second = (second + " " + word).trim();
-    }
-  }
-  const line1 = document.getElementById("van-event-line-1");
-  const line2 = document.getElementById("van-event-line-2");
-  const date = document.getElementById("van-event-date");
-  if (line1) line1.textContent = first.toUpperCase();
-  if (line2) line2.textContent = second.toUpperCase();
-  if (date) date.textContent = event.date ? String(event.date).toUpperCase() : "JNA · EVENT UPDATE";
   track.hidden = false;
-  track.style.cursor = "pointer";
-  track.addEventListener("click", () => {
-    window.location.href = event.link || "news-events.html";
+  track.setAttribute("role","link");
+  track.setAttribute("tabindex","0");
+  track.setAttribute("aria-label", chosen.title + (chosen.days === 0 ? " today" : " upcoming") + ". Open academy updates.");
+  const openUpdates = () => { window.location.href = "news-events.html"; };
+  track.addEventListener("click", openUpdates);
+  track.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openUpdates(); }
   });
 })();
