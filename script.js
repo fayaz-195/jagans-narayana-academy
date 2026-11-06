@@ -36,3 +36,36 @@ document.addEventListener("click", event => {
     });
   }
 });
+
+
+// Premium navigation: compact on scroll and close mobile menus after selection.
+const siteHeader = document.querySelector(".site-header");
+const updateHeader = () => {
+  if (siteHeader) siteHeader.classList.toggle("scrolled", window.scrollY > 24);
+};
+updateHeader();
+window.addEventListener("scroll", updateHeader, {passive:true});
+
+// Reveal page sections smoothly as visitors scroll.
+const revealTargets = document.querySelectorAll(
+  ".section, .quick-strip, .class-card, .step, .contact-panel, .page-hero, .content-section, .info-card"
+);
+revealTargets.forEach((element, index) => {
+  element.classList.add("js-reveal");
+  if (element.classList.contains("class-card") || element.classList.contains("info-card")) {
+    element.style.transitionDelay = (index % 5) * 70 + "ms";
+  }
+});
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12,rootMargin:"0px 0px -35px 0px"});
+  revealTargets.forEach(element => revealObserver.observe(element));
+} else {
+  revealTargets.forEach(element => element.classList.add("is-visible"));
+}
