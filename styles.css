@@ -223,3 +223,15 @@ body{font-family:"DM Sans",sans-serif;background:#fff;overflow-x:hidden}
   .delivery-van{animation-duration:10s!important}
   @keyframes vanDrive{from{left:-260px}to{left:100%}}
 }
+
+
+/* Remove the roadside trees and show a rope-pulling cartoon while scrolling */
+.tree-scroll{display:none!important}
+.rope-cartoon{position:fixed;right:12px;bottom:4px;width:150px;height:138px;z-index:120;pointer-events:none;opacity:0;transform:translate(28px,24px) scale(.82);transform-origin:bottom right;transition:opacity .25s ease,transform .3s ease;filter:drop-shadow(0 5px 5px rgba(0,0,0,.12))}
+.rope-cartoon svg{width:100%;height:100%;overflow:visible}
+.rope-cartoon.is-pulling{opacity:1;transform:translate(0,0) scale(1)}
+.pull-rope{fill:none;stroke:#b9874f;stroke-width:4;stroke-linecap:round;stroke-dasharray:5 3}
+.puller{transform-box:fill-box;transform-origin:bottom center;animation:cartoonTug .65s ease-in-out infinite alternate}
+@keyframes cartoonTug{from{transform:translate(0,0) rotate(1deg)}to{transform:translate(5px,3px) rotate(-4deg)}}
+@media(max-width:680px){.rope-cartoon{width:112px;height:105px;right:5px;bottom:2px}}
+@media(prefers-reduced-motion:reduce){.puller{animation:none}}
