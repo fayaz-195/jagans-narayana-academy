@@ -135,12 +135,3 @@ if ("IntersectionObserver" in window) {
   });
 })();
 
-
-// Reveal the rope-pulling cartoon once the visitor starts scrolling.
-(() => {
-  const character = document.getElementById("rope-cartoon");
-  if (!character) return;
-  const updatePulling = () => character.classList.toggle("is-pulling", window.scrollY > 100);
-  updatePulling();
-  window.addEventListener("scroll", updatePulling, {passive:true});
-})();
