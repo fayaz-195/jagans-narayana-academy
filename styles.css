@@ -149,3 +149,8 @@ body{font-family:"DM Sans",sans-serif;background:#fff;overflow-x:hidden}
 @keyframes wheelSpin{to{rotate:360deg}}
 @media(max-width:680px){.delivery-track{height:86px;margin-top:16px}.delivery-van{width:250px}.van-caption{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.delivery-van,.van-bounce,.delivery-van svg circle{animation:none!important}}
+
+/* Make today's announcement visible immediately; van travels across the full banner */
+.delivery-van{left:0;animation:vanDrive 13s ease-in-out infinite alternate}
+@keyframes vanDrive{0%{left:0}100%{left:calc(100% - 330px)}}
+@media(max-width:680px){.delivery-van{animation-duration:10s}@keyframes vanDrive{0%{left:0}100%{left:calc(100% - 250px)}}}
