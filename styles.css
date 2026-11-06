@@ -172,3 +172,28 @@ body{font-family:"DM Sans",sans-serif;background:#fff;overflow-x:hidden}
 @keyframes treesDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:680px){.tree-scroll{height:62px;bottom:13px;animation-duration:8s}.roadside-tree{transform:scale(.78);transform-origin:bottom;flex-basis:34px}.roadside-tree.tree-1{transform:scale(.62)}.roadside-tree.tree-2{transform:scale(.88)}}
 @media(prefers-reduced-motion:reduce){.tree-scroll{animation:none}}
+
+
+/* Strong, clearly visible roadside scenery; keep trees behind the van */
+.delivery-track{position:relative;isolation:isolate;overflow:hidden}
+.tree-scroll{position:absolute!important;left:0;right:auto;bottom:13px!important;width:200%!important;height:92px!important;display:flex!important;z-index:1!important;animation:treesDrift 8s linear infinite!important;pointer-events:none}
+.tree-row{flex:0 0 50%!important;width:50%!important;height:100%;display:flex!important;align-items:flex-end!important;justify-content:space-evenly!important;gap:12px!important;padding:0 18px!important}
+.roadside-tree{position:relative!important;display:block!important;flex:0 1 42px!important;width:42px;height:76px!important;min-width:22px;opacity:1!important;transform:none!important;transform-origin:bottom center}
+.roadside-tree:before{content:""!important;position:absolute!important;display:block!important;left:0!important;top:0!important;width:42px!important;height:48px!important;background:#77a98a!important;border-radius:48% 52% 43% 57%!important;box-shadow:inset -6px -5px 0 rgba(6,63,55,.12),0 2px 5px rgba(6,63,55,.08)!important}
+.roadside-tree:after{content:""!important;position:absolute!important;display:block!important;left:17px!important;top:40px!important;width:9px!important;height:36px!important;background:#98704e!important;border-radius:3px!important}
+.roadside-tree.tree-1:before{background:#a6c5a7!important}
+.roadside-tree.tree-2:before{background:#4f9276!important}
+.delivery-road{z-index:2!important}
+.delivery-van{z-index:3!important;animation-name:vanDrive!important;animation-direction:normal!important;animation-timing-function:linear!important}
+@keyframes treesDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes vanDrive{from{left:-340px}to{left:100%}}
+@media(max-width:680px){
+ .tree-scroll{height:70px!important;bottom:12px!important;animation-duration:6s!important}
+ .tree-row{gap:6px!important;padding:0 10px!important}
+ .roadside-tree{height:60px!important;flex-basis:30px!important}
+ .roadside-tree:before{width:32px!important;height:38px!important}
+ .roadside-tree:after{left:13px!important;top:32px!important;height:28px!important;width:7px!important}
+ .delivery-van{animation-name:vanDrive!important;animation-direction:normal!important;animation-timing-function:linear!important}
+ @keyframes vanDrive{from{left:-260px}to{left:100%}}
+}
+@media(prefers-reduced-motion:reduce){.tree-scroll{animation:none!important}.delivery-van{animation:none!important;left:0!important}}
