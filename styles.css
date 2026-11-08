@@ -1163,3 +1163,49 @@ body{color:#17332d;background:#fff}
 .jna-archive-key small{color:#77847c;font:600 10px "DM Sans"}
 @media(max-width:760px){.jna-archive-wrap{padding:35px 0 60px}.jna-archive-result-area{grid-template-columns:1fr;gap:30px;max-width:460px}.jna-result-poster{min-height:490px}.jna-archive-side-note{text-align:center}.jna-archive-key{text-align:left}}
 @media(max-width:480px){.jna-archive-heading h1{font-size:32px}.jna-year-tabs{gap:6px}.jna-year-tabs button{height:48px}.jna-category-tabs{gap:8px}.jna-category-tabs button{min-width:calc(33.33% - 8px);padding:0 12px}.jna-result-poster{min-height:460px;padding:22px 15px}.jna-poster-title{font-size:43px}.jna-poster-title strong{font-size:57px}}
+
+/* Results archive refinement — editorial year/course selector and demo poster */
+.jna-archive-wrap{padding:52px 0 82px;background:linear-gradient(180deg,#f7f9f6 0,#fff 390px)}
+.jna-archive-heading{margin-bottom:32px}
+.jna-archive-heading>span{display:inline-flex;align-items:center;gap:10px}
+.jna-archive-heading>span:before,.jna-archive-heading>span:after{content:"";width:24px;height:1px;background:#f36b12}
+.jna-archive-heading h1{font-size:clamp(34px,4vw,46px);letter-spacing:-.06em}
+.jna-year-tabs{max-width:980px;gap:12px;margin-bottom:28px}
+.jna-year-tabs button{height:58px;border-radius:8px;background:#fff;font-size:16px;box-shadow:0 3px 12px #173c2710}
+.jna-year-tabs button.is-active{background:#06483c;border-color:#06483c;box-shadow:0 8px 20px #06483c25}
+.jna-category-tabs{max-width:1050px;gap:9px;margin-bottom:34px}
+.jna-category-tabs button{min-width:118px;height:42px;padding:0 19px;border-color:#d8e4dc;border-radius:7px;font-size:12px;box-shadow:none}
+.jna-category-tabs button.is-active{background:#f36b12;border-color:#f36b12;box-shadow:0 6px 15px #f36b1226}
+.jna-archive-result-area-v2{display:flex;flex-direction:column;gap:22px;max-width:690px;padding:0;margin:0 auto}
+.jna-result-poster-v2{width:100%;min-height:0;aspect-ratio:1.18;padding:clamp(18px,3vw,32px);border:0;outline:0;border-radius:5px;background:linear-gradient(135deg,#053f37 0%,#07584a 58%,#f36b12 58%,#e96512 100%);box-shadow:0 18px 45px #0c33251f}
+.jna-result-poster-v2:before{inset:10px;border:1px solid #ffffff65}
+.jna-poster-v2-top,.jna-poster-v2-main,.jna-poster-v2-students,.jna-poster-v2-foot{position:relative;z-index:1}
+.jna-poster-v2-top{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.jna-poster-v2-brand{display:flex;align-items:center;gap:10px;text-align:left;color:#fff;font:800 10px/1.4 "DM Sans";letter-spacing:.06em}
+.jna-poster-v2-brand>span{display:grid;place-items:center;width:42px;height:42px;border-radius:5px;background:#fff;color:#06483c;font:800 15px Manrope}
+.jna-poster-v2-brand b{color:#ffe1c9;font-size:11px}
+.jna-poster-v2-tag{padding:7px 10px;border:1px solid #ffffff80;color:#fff;font:800 8px "DM Sans";letter-spacing:.15em}
+.jna-poster-v2-main{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:clamp(22px,4vw,42px) 0 22px}
+.jna-poster-v2-copy{text-align:left;color:#fff}
+.jna-poster-v2-copy>small{color:#ffd5b5;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-poster-v2-copy h2{margin:7px 0 12px;color:#fff;font:800 clamp(38px,7vw,70px)/.85 Manrope;letter-spacing:-.08em}
+.jna-poster-v2-copy h2 em{color:#ffc08e;font-style:normal}
+.jna-poster-v2-course{display:inline-block;max-width:100%;padding:8px 12px;border:1px solid #ffffffa6;border-radius:3px;color:#fff;font:800 clamp(9px,1.5vw,13px) "DM Sans";letter-spacing:.04em}
+.jna-poster-v2-seal{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:0 0 clamp(90px,17vw,145px);width:clamp(90px,17vw,145px);height:clamp(90px,17vw,145px);border:5px double #ffd3aa;border-radius:50%;background:#ffffff12;color:#fff;text-align:center;transform:rotate(7deg)}
+.jna-poster-v2-seal span{font:800 clamp(22px,4vw,34px) Manrope}
+.jna-poster-v2-seal b{margin-top:3px;color:#ffcfaa;font:800 7px/1.4 "DM Sans";letter-spacing:.13em}
+.jna-poster-v2-students{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px;background:#ffffff17;border:1px solid #ffffff45}
+.jna-demo-student{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:105px;padding:8px 4px;background:#fff;color:#06483c;text-align:center}
+.jna-demo-avatar{display:grid;place-items:center;width:42px;height:42px;margin-bottom:7px;border-radius:50%;background:linear-gradient(145deg,#dfece3,#f8d8bf);color:#075345;font:800 17px Manrope}
+.jna-demo-student b{font:800 8px "DM Sans";letter-spacing:.05em}
+.jna-demo-student small{margin-top:4px;color:#76847c;font:600 7px "DM Sans"}
+.jna-poster-v2-foot{display:flex;justify-content:space-between;gap:10px;margin-top:17px;color:#fff;font:800 8px "DM Sans";letter-spacing:.12em}
+.jna-poster-v2-foot b{color:#ffcfaa}
+.jna-poster-v2-foot i{font-style:normal}
+.jna-poster-demo-stamp{position:absolute;right:20px;bottom:55px;z-index:2;transform:rotate(-9deg);padding:5px 8px;border:1px solid #ffffffb0;color:#fff;font:800 7px "DM Sans";letter-spacing:.15em}
+.jna-archive-selected{width:100%;padding:17px 20px;border:1px solid #e4ebe5;border-radius:8px;background:#f8faf7}
+.jna-archive-selected .jna-results-kicker{margin-bottom:6px}
+.jna-archive-selected>b{display:block;color:#06483c;font:800 14px Manrope}
+.jna-archive-selected>p{margin:7px 0 0;color:#718077;font:400 11px/1.7 "DM Sans"}
+@media(max-width:760px){.jna-archive-wrap{padding:38px 0 60px}.jna-category-tabs button{min-width:108px}.jna-archive-result-area-v2{max-width:560px}}
+@media(max-width:480px){.jna-archive-heading h1{font-size:34px}.jna-year-tabs button{height:50px}.jna-category-tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:0 2px 8px}.jna-category-tabs button{flex:0 0 auto;min-width:auto}.jna-result-poster-v2{aspect-ratio:.94;padding:18px}.jna-poster-v2-main{margin:25px 0 18px}.jna-poster-v2-tag{font-size:7px}.jna-poster-v2-students{gap:6px;padding:8px}.jna-demo-student{min-height:92px}.jna-demo-avatar{width:35px;height:35px}.jna-poster-v2-foot{font-size:6px}.jna-poster-demo-stamp{bottom:48px;right:15px}}
