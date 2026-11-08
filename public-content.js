@@ -7,7 +7,7 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     const {data,error}=await supabase.from("jna_site_public").select("content_key,content_value");
     if(error) throw error;
     const values={},pageData={},visualData={};
-    (data||[]).forEach(row=>{const v=row.content_value;if(!v||v.deleted)return;if(row.content_key.startsWith("page:")){pageData[row.content_key.slice(5)]=v.value||{};return}if(row.content_key.startsWith("visual:")){const parts=row.content_key.split(":");if(parts[1]===((location.pathname.split("/").pop()||"index").replace(/\\.html$/,"")||"index"))visualData[parts.slice(2).join(":")]=v;return}if(typeof v.value==="string"&&v.value.trim())values[row.content_key]=v.value.trim()});
+    (data||[]).forEach(row=>{const v=row.content_value;if(!v||v.deleted)return;if(row.content_key.startsWith("page:")){pageData[row.content_key.slice(5)]=v.value||{};return}if(row.content_key.startsWith("visual:")){const parts=row.content_key.split(":");if(parts[1]===((location.pathname.split("/").pop()||"index").replace(/\.html$/,"")||"index"))visualData[parts.slice(2).join(":")]=v;return}if(typeof v.value==="string"&&v.value.trim())values[row.content_key]=v.value.trim()});
     const setText=(selector,value)=>{const el=document.querySelector(selector);if(el&&value)el.textContent=value};
     if(location.pathname.endsWith("/")||location.pathname.endsWith("/index.html")||location.pathname==="/"){
       setText(".hero-copy h1",values.hero_title);
@@ -35,7 +35,7 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     }
     if(values.hero_image){const hero=document.querySelector(".hero-art");if(hero)hero.style.backgroundImage="url("+JSON.stringify(values.hero_image)+")"}
 
-    const slug=(location.pathname.split("/").pop()||"index").replace(/\\.html$/,"")||"index";
+    const slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/,"")||"index";
     const page=pageData[slug];
     if(page){
       const h=document.querySelector("main h1");if(h&&page.title)h.textContent=page.title;
