@@ -1237,3 +1237,22 @@ body{color:#17332d;background:#fff}
 .jna-archive-result-area-v2{max-width:720px}
 @media(max-width:760px){.jna-year-select{flex-direction:column;gap:10px;margin-bottom:28px}.jna-category-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.jna-category-tabs button{height:70px;padding:10px}.jna-course-heading{padding:0 4px}}
 @media(max-width:480px){.jna-archive-wrap{padding:35px 0 58px}.jna-year-tabs button{width:88px;height:38px}.jna-category-tabs{gap:8px}.jna-category-tabs button{height:68px;gap:9px}.jna-course-symbol{width:30px;height:30px;flex-basis:30px}.jna-course-copy b{font-size:12px}.jna-course-copy small{font-size:8px}.jna-course-heading h2{font-size:26px}.jna-course-heading>small{font-size:8px}}
+
+/* Results page: full poster visible beside course selection */
+.jna-course-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.9fr);align-items:start;gap:26px;max-width:1120px;margin:0 auto}
+.jna-course-column{min-width:0}
+.jna-course-heading{max-width:none}
+.jna-category-tabs{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:0}
+.jna-category-tabs button{height:70px}
+.jna-archive-result-area-v2{width:100%;max-width:none;min-width:0;margin:0;padding:0;gap:14px}
+.jna-result-poster-v2{aspect-ratio:1.02;min-height:0;padding:clamp(16px,2vw,25px)}
+.jna-poster-v2-main{margin:22px 0 16px}
+.jna-poster-v2-seal{flex-basis:100px;width:100px;height:100px}
+.jna-poster-v2-copy h2{font-size:clamp(38px,4vw,54px)}
+.jna-poster-v2-students{gap:7px;padding:8px}
+.jna-demo-student{min-height:80px}
+.jna-demo-avatar{width:34px;height:34px}
+.jna-poster-demo-stamp{bottom:45px}
+.jna-archive-selected{padding:13px 15px}
+@media(max-width:900px){.jna-course-layout{grid-template-columns:1fr;max-width:720px}.jna-category-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.jna-archive-result-area-v2{max-width:620px;margin:24px auto 0}.jna-result-poster-v2{aspect-ratio:1.18}}
+@media(max-width:560px){.jna-category-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.jna-result-poster-v2{aspect-ratio:.94}.jna-poster-v2-copy h2{font-size:43px}}
