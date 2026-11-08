@@ -71,7 +71,8 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
 
 /* Front-end visual editor: only shown on the explicit admin-mode URL. */
 (async()=>{
- if(new URLSearchParams(location.search).get("jna_admin")!=="1")return;
+ if(new URLSearchParams(location.search).get("jna_admin")==="1")sessionStorage.setItem("jna_admin_mode","1");
+ if(sessionStorage.getItem("jna_admin_mode")!=="1")return;
  try{
   const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
   const sb=createClient(CMS_URL,CMS_KEY);
@@ -81,6 +82,18 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
   if(adminErr||!admins?.length)return;
   const slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/,"")||"index";
   // Keep admin mode while navigating between all academy pages.
+  // Keep admin mode across all internal navigation, including mobile menu links.
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("a[href]");
+    if(!a)return;
+    try{
+      const u=new URL(a.getAttribute("href"),location.href);
+      if(u.origin===location.origin && !u.hash && !/^(mailto:|tel:)/i.test(a.getAttribute("href"))){
+        u.searchParams.set("jna_admin","1");
+        a.href=u.pathname+u.search+u.hash;
+      }
+    }catch(_){}
+  },true);
   document.querySelectorAll('a[href]').forEach(a=>{
     try{
       const u=new URL(a.getAttribute("href"),location.href);
@@ -110,7 +123,7 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     if(v.kind==="text"){const el=nodes.find(n=>n.dataset.jnaEditId===id);if(el)el.textContent=v.value}
     if(v.kind==="image"){const el=imgs.find(n=>n.dataset.jnaImageId===id);if(el)el.src=v.value}
   });
-  const sections=[...document.querySelectorAll("main > section, main section.section, main .visual-pathways, main .quick-strip")].filter(el=>!el.closest("#jna-visual-toolbar"));
+  const sections=[...document.querySelectorAll("main > section, main section, main article, main .section, main .visual-pathways, main .quick-strip")].filter((el,i,arr)=>!el.closest("#jna-visual-toolbar")&&arr.indexOf(el)===i);
   sections.forEach((section,i)=>{
     section.dataset.jnaSectionId=String(i);
     const controls=document.createElement("div");controls.className="jna-section-controls";
