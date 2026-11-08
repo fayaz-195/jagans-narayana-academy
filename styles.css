@@ -945,3 +945,79 @@ body{color:#17332d;background:#fff}
  .jna-founder-cta>.container{display:block}
  .jna-founder-cta-actions{margin-top:23px}
 }
+
+
+/* Schooling page — JNA green/orange responsive academic design */
+.jna-school-page{overflow:hidden}
+.jna-school-hero{background:#f7f7f2;padding:48px 0 62px}
+.jna-school-hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:54px;align-items:center}
+.jna-school-copy .breadcrumb{margin-bottom:32px;color:#7b8982;font:800 10px "DM Sans";letter-spacing:.14em}
+.jna-school-copy .breadcrumb a{color:#00604d;text-decoration:none}
+.jna-school-copy .breadcrumb span{color:#f36b12;padding:0 8px}
+.jna-school-kicker{display:block;color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.17em;margin-bottom:16px}
+.jna-school-copy h1,.jna-school-intro h2,.jna-school-section-head h2,.jna-school-journey h2,.jna-school-cta h2{margin:0 0 20px;color:#06483c;font:800 clamp(43px,5vw,68px)/1.02 Manrope;letter-spacing:-.07em}
+.jna-school-copy h1 em,.jna-school-intro h2 em,.jna-school-section-head h2 em,.jna-school-journey h2 em,.jna-school-cta h2 em{font-style:normal;color:#f36b12}
+.jna-school-copy>p{max-width:500px;margin:0 0 27px;color:#65736d;font:400 15px/1.85 "DM Sans"}
+.jna-school-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.jna-school-btn{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:0 21px;background:#005343;border-radius:6px;color:#fff;text-decoration:none;font:800 12px "DM Sans"}
+.jna-school-btn:hover{background:#f36b12}
+.jna-school-link{color:#17483b;text-decoration:none;font:800 12px "DM Sans"}
+.jna-school-visual{position:relative;min-height:440px}
+.jna-school-visual:before{content:"";position:absolute;left:-14px;top:16px;bottom:-14px;width:14px;background:#f36b12}
+.jna-school-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(.85)}
+.jna-school-image-label{position:absolute;left:0;bottom:0;display:flex;flex-direction:column;gap:8px;min-width:245px;padding:20px 24px;background:#06483c;color:#fff}
+.jna-school-image-label span{color:#ffad78;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-school-image-label b{font:800 19px/1.25 Manrope}
+.jna-school-side-label{position:absolute;right:-31px;top:22px;writing-mode:vertical-rl;color:#fff;font:800 9px "DM Sans";letter-spacing:.17em}
+.jna-school-intro{padding:84px 0;background:#fff}
+.jna-school-intro-grid{display:grid;grid-template-columns:.55fr 1fr;gap:65px}
+.jna-school-overline{color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.16em}
+.jna-school-intro h2,.jna-school-section-head h2,.jna-school-journey h2,.jna-school-cta h2{font-size:clamp(35px,4vw,53px);margin-bottom:17px}
+.jna-school-intro p,.jna-school-section-head>p,.jna-school-journey p,.jna-school-cta p{max-width:690px;margin:0;color:#65736d;font:400 14px/1.9 "DM Sans"}
+.jna-school-pillars{padding:82px 0;background:#06483c}
+.jna-school-section-head{display:flex;justify-content:space-between;align-items:end;gap:45px;margin-bottom:35px}
+.jna-school-section-head h2{color:#fff}
+.jna-school-section-head>p{max-width:420px;color:#d0e2da;margin-bottom:4px}
+.jna-school-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff35;border:1px solid #ffffff35}
+.jna-school-card-grid article{position:relative;min-height:230px;padding:25px 22px;background:#075345}
+.jna-school-card-grid article>span{position:absolute;right:20px;top:19px;color:#a5c1b6;font:800 10px "DM Sans";letter-spacing:.12em}
+.jna-school-icon{display:grid;place-items:center;width:43px;height:43px;margin:8px 0 21px;border-radius:50%;background:#ffffff18;color:#ff9e67;font-size:22px}
+.jna-school-card-grid h3{margin:0 0 10px;color:#fff;font:800 18px Manrope}
+.jna-school-card-grid p{margin:0;color:#c7d9d1;font:400 12px/1.7 "DM Sans"}
+.jna-school-journey{padding:82px 0;background:#f4f7f3}
+.jna-school-journey-grid{display:grid;grid-template-columns:.8fr 1fr;gap:70px;align-items:center}
+.jna-school-journey p{margin-bottom:24px}
+.jna-school-next-links{border-top:1px solid #dce6df}
+.jna-school-next-links a{display:flex;align-items:center;gap:17px;padding:18px 5px;border-bottom:1px solid #dce6df;text-decoration:none}
+.jna-school-next-links span{color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.12em}
+.jna-school-next-links b{flex:1;color:#174438;font:800 15px Manrope}
+.jna-school-next-links i{color:#ed6b17;font-style:normal}
+.jna-school-cta{padding:74px 0;background:#fff0e4;border-top:5px solid #f36b12}
+.jna-school-cta>.container{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.jna-school-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:15px;flex-shrink:0}
+.jna-school-cta-actions>a:last-child{color:#06483c;text-decoration:none;font:800 13px "DM Sans"}
+@media(max-width:900px){
+ .jna-school-hero-grid{grid-template-columns:1fr 1fr;gap:30px}
+ .jna-school-visual{min-height:370px}
+ .jna-school-card-grid{grid-template-columns:repeat(2,1fr)}
+ .jna-school-section-head{display:block}
+ .jna-school-section-head>p{margin-top:14px}
+}
+@media(max-width:650px){
+ .jna-school-hero{padding:30px 0 44px}
+ .jna-school-hero-grid{grid-template-columns:1fr;gap:27px}
+ .jna-school-copy .breadcrumb{margin-bottom:25px}
+ .jna-school-copy h1{font-size:clamp(42px,11vw,59px)}
+ .jna-school-copy>p{font-size:14px}
+ .jna-school-visual{min-height:290px;margin-left:12px;margin-right:10px}
+ .jna-school-side-label{right:-22px}
+ .jna-school-intro,.jna-school-journey,.jna-school-cta{padding:58px 0}
+ .jna-school-intro-grid{grid-template-columns:1fr;gap:18px}
+ .jna-school-pillars{padding:58px 0}
+ .jna-school-card-grid{grid-template-columns:1fr 1fr}
+ .jna-school-card-grid article{min-height:205px;padding:20px 16px}
+ .jna-school-journey-grid{grid-template-columns:1fr;gap:30px}
+ .jna-school-cta>.container{display:block}
+ .jna-school-cta-actions{margin-top:23px}
+}
+@media(max-width:390px){.jna-school-card-grid{grid-template-columns:1fr}}
