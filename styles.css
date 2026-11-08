@@ -634,3 +634,32 @@ body{color:#17332d;background:#fff}
  .jna-programme-grid .programme-card{min-height:168px}
  .visual-pathways{padding:58px 0}
 }
+
+
+/* Homepage cleanup: unique academy features replacing duplicate course promos */
+.jna-features-section{background:#f5f7f3;padding:82px 0 88px}
+.jna-features-heading{display:grid;grid-template-columns:1fr .72fr;gap:60px;align-items:end;margin-bottom:38px}
+.jna-feature-kicker{display:block;color:#e96a17;font:800 10px "DM Sans",sans-serif;letter-spacing:.18em;margin-bottom:14px}
+.jna-features-heading h2{font:800 clamp(34px,4vw,54px)/1.04 Manrope,sans-serif;letter-spacing:-.06em;color:#06483c;margin:0}
+.jna-features-heading h2 em{font-style:normal;color:#f36b12}
+.jna-features-heading>p{font:400 15px/1.8 "DM Sans",sans-serif;color:#63736c;margin:0 0 4px;max-width:510px}
+.jna-features-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#dce6df;border:1px solid #dce6df}
+.jna-feature-card{position:relative;min-height:220px;padding:28px 28px 26px;background:#fff;transition:background .2s ease,transform .2s ease}
+.jna-feature-card:hover{background:#fffaf4;transform:translateY(-3px);z-index:1}
+.jna-feature-number{position:absolute;right:24px;top:22px;color:#a9b8b0;font:700 11px "DM Sans",sans-serif;letter-spacing:.12em}
+.jna-feature-symbol{display:grid;place-items:center;width:43px;height:43px;margin-bottom:22px;border-radius:50%;background:#eaf3ed;color:#00604d;font-size:23px}
+.jna-feature-card:nth-child(2n) .jna-feature-symbol{background:#fff0e4;color:#ed6b17}
+.jna-feature-card h3{margin:0 0 9px;color:#143d32;font:800 18px Manrope,sans-serif;letter-spacing:-.025em}
+.jna-feature-card p{margin:0;max-width:340px;color:#66756e;font:400 13px/1.7 "DM Sans",sans-serif}
+@media(max-width:850px){
+ .jna-features-heading{grid-template-columns:1fr;gap:16px}
+ .jna-features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .jna-features-section{padding:58px 0}
+ .jna-features-heading{gap:12px;margin-bottom:24px}
+ .jna-features-heading>p{font-size:13px}
+ .jna-features-grid{grid-template-columns:1fr}
+ .jna-feature-card{min-height:0;padding:22px}
+ .jna-feature-symbol{margin-bottom:14px}
+}
