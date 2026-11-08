@@ -302,7 +302,7 @@ if ("IntersectionObserver" in window) {
         <a href="contact.html"><span class="jna-footer-icon">↗</span>Contact & directions</a>
       </div>
     </div>
-    <div class="jna-footer-bottom"><div class="container"><span>© <span class="jna-footer-year"></span> Jagan Sir's Narayana Academy. All rights reserved. <span class="jna-footer-credit">Designed by <a href="https://www.instagram.com/campuscreatives/" target="_blank" rel="noopener">Campus Creatives</a></span></span><div><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div></div></div>`;
+    <div class="jna-footer-bottom"><div class="container"><span>© <span class="jna-footer-year"></span> Jagan Sir's Narayana Academy. All rights reserved. <span class="jna-footer-credit">Designed by <a href="https://campus-creatives.pages.dev/" target="_blank" rel="noopener">Campus Creatives</a></span></span><div><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div></div></div>`;
   const year=oldFooter.querySelector(".jna-footer-year");
   if(year) year.textContent=new Date().getFullYear();
   const form=oldFooter.querySelector("#jnaFooterEnquiry");
