@@ -316,3 +316,32 @@ if ("IntersectionObserver" in window) {
     window.open("https://wa.me/919133444384?text="+encodeURIComponent(message),"_blank","noopener");
   });
 })();
+/* Site-wide motion, artwork accents and floating contact actions */
+(function(){
+  if(document.querySelector(".jna-floating-contact")) return;
+  const dock=document.createElement("div");
+  dock.className="jna-floating-contact";
+  dock.setAttribute("aria-label","Quick contact");
+  dock.innerHTML=`
+    <a class="jna-float-call" href="tel:+919133444384" aria-label="Call Jagan Sir's Narayana Academy" title="Call the academy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.32.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.46.57 3.58a1 1 0 0 1-.24 1.02z"/></svg><span>Call</span>
+    </a>
+    <a class="jna-float-whatsapp" href="https://wa.me/919133444384" target="_blank" rel="noopener" aria-label="Chat with the academy on WhatsApp" title="WhatsApp the academy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.5A11.8 11.8 0 0 0 20.5 3.5M12 21a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.6.9 1-3.5-.2-.4A9.6 9.6 0 1 1 12 21m5.3-7.2c-.3-.2-1.7-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a7.8 7.8 0 0 1-2.3-1.4 8.5 8.5 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-.9-2.3c-.2-.6-.5-.5-.7-.5H7.7c-.3 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5c.8.4 1.5.6 2 .7.9.3 1.7.2 2.3.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.2-1.4-.2-.3-.5-.4"/></svg><span>WhatsApp</span>
+    </a>`;
+  document.body.appendChild(dock);
+})();
+(function(){
+  const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!reduce){
+    document.documentElement.classList.add("jna-motion-ready");
+    const candidates=document.querySelectorAll("main section:not(.page-hero),.content-grid>.info-card,.jna-adm-course-grid>a,.jna-contact-course-grid>a,.jna-update-card,.jna-notice-categories article");
+    candidates.forEach((el,index)=>{el.classList.add("jna-reveal");el.style.setProperty("--jna-reveal-delay",Math.min(index%4,3)*75+"ms")});
+    if("IntersectionObserver" in window){
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add("jna-is-visible");observer.unobserve(entry.target)}
+      }),{threshold:.12,rootMargin:"0px 0px -35px 0px"});
+      candidates.forEach(el=>observer.observe(el));
+    }else candidates.forEach(el=>el.classList.add("jna-is-visible"));
+  }
+})();
