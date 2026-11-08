@@ -6,8 +6,8 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     const supabase=createClient(CMS_URL,CMS_KEY);
     const {data,error}=await supabase.from("jna_site_public").select("content_key,content_value");
     if(error) throw error;
-    const values={},pageData={};
-    (data||[]).forEach(row=>{const v=row.content_value;if(!v||v.deleted)return;if(row.content_key.startsWith("page:")){pageData[row.content_key.slice(5)]=v.value||{};return}if(typeof v.value==="string"&&v.value.trim())values[row.content_key]=v.value.trim()});
+    const values={},pageData={},visualData={};
+    (data||[]).forEach(row=>{const v=row.content_value;if(!v||v.deleted)return;if(row.content_key.startsWith("page:")){pageData[row.content_key.slice(5)]=v.value||{};return}if(row.content_key.startsWith("visual:")){const parts=row.content_key.split(":");if(parts[1]===((location.pathname.split("/").pop()||"index").replace(/\\.html$/,"")||"index"))visualData[parts.slice(2).join(":")]=v;return}if(typeof v.value==="string"&&v.value.trim())values[row.content_key]=v.value.trim()});
     const setText=(selector,value)=>{const el=document.querySelector(selector);if(el&&value)el.textContent=value};
     if(location.pathname.endsWith("/")||location.pathname.endsWith("/index.html")||location.pathname==="/"){
       setText(".hero-copy h1",values.hero_title);
@@ -61,6 +61,9 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
         gallery.append(track);main.append(gallery);
       }
     }
+    const visualNodes=[...document.querySelectorAll("main h1,main h2,main h3,main p,main li,main a,main button,header .brand-copy strong,header .brand-copy small,footer p,footer a")].filter(el=>!el.closest("#jna-visual-toolbar"));
+    const visualImages=[...document.querySelectorAll("main img")];
+    Object.entries(visualData).forEach(([id,v])=>{if(v.kind==="text"&&visualNodes[Number(id)])visualNodes[Number(id)].textContent=v.value;if(v.kind==="image"&&visualImages[Number(id)])visualImages[Number(id)].src=v.value});
     if(!document.getElementById("cms-page-style")){const style=document.createElement("style");style.id="cms-page-style";style.textContent=".cms-page-sections,.cms-gallery{max-width:1180px;margin:60px auto;padding:0 20px}.cms-page-section{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin:28px 0 54px}.cms-page-section.reverse img{order:2}.cms-page-section img{width:100%;height:330px;object-fit:cover;border-radius:14px}.cms-page-section-copy h2,.cms-gallery h2{font:800 clamp(25px,3vw,38px) Manrope;color:#063f37}.cms-page-section-copy p{font:15px/1.8 'DM Sans',sans-serif;color:#64756f}.cms-page-section-copy a{color:#008b7b;font-weight:800}.cms-gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,32%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 0}.cms-gallery-track figure{margin:0;scroll-snap-align:start}.cms-gallery-track img{width:100%;height:230px;object-fit:cover;border-radius:12px}.cms-gallery-track figcaption{padding:10px 2px;color:#063f37;font-weight:700}@media(max-width:680px){.cms-page-section{grid-template-columns:1fr;gap:15px}.cms-page-section.reverse img{order:0}.cms-page-section img{height:230px}.cms-gallery-track{grid-auto-columns:82%}}";document.head.append(style)}
 
   }catch(e){console.warn("Academy content could not be refreshed",e)}
