@@ -65,3 +65,70 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
 
   }catch(e){console.warn("Academy content could not be refreshed",e)}
 })();
+
+/* Front-end visual editor: only authenticated JNA admins see this toolbar. */
+(async()=>{
+ try{
+  const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
+  const sb=createClient(CMS_URL,CMS_KEY);
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session)return;
+  const {data:admins,error:adminErr}=await sb.from("jna_admin_users").select("user_id").eq("user_id",session.user.id).limit(1);
+  if(adminErr||!admins?.length)return;
+  const slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/,"")||"index";
+  const bar=document.createElement("div");bar.id="jna-visual-toolbar";
+  bar.innerHTML='<strong>JNA VISUAL EDITOR</strong><span class="jna-editor-page"></span><button type="button" data-action="edit">Edit Page</button><button type="button" data-action="save">Save Draft</button><button type="button" data-action="publish">Publish</button><button type="button" data-action="exit">Exit</button><span class="jna-editor-status" role="status"></span>';
+  document.body.append(bar);
+  const style=document.createElement("style");style.textContent='#jna-visual-toolbar{position:fixed;z-index:99999;left:12px;right:12px;bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#063f37;color:#fff;padding:10px 12px;border-radius:13px;box-shadow:0 8px 32px #0004;font:600 12px "DM Sans",sans-serif}#jna-visual-toolbar strong{color:#ffb477;letter-spacing:.08em}#jna-visual-toolbar button{border:0;border-radius:7px;padding:9px 12px;background:#fff;color:#063f37;font-weight:800}#jna-visual-toolbar button[data-action=publish]{background:#f36b12;color:#fff}.jna-editor-page{opacity:.8}#jna-visual-toolbar .jna-editor-status{flex-basis:100%;font-size:11px}body.jna-editing [data-jna-editable=true]{outline:2px dashed #f36b12;outline-offset:4px;cursor:text}body.jna-editing img[data-jna-image=true]{outline:3px solid #f36b12;cursor:pointer}body.jna-editing [data-jna-editable=true]:focus{outline:2px solid #008b7b}body{padding-bottom:78px}';
+  document.head.append(style);
+  bar.querySelector(".jna-editor-page").textContent="· "+slug;
+  const status=bar.querySelector(".jna-editor-status");
+  let editing=false,dirty=false;
+  const selectorPath=el=>{const parts=[];while(el&&el!==document.body){let n=1,s=el;while((s=s.previousElementSibling))if(s.tagName===el.tagName)n++;parts.unshift(el.tagName.toLowerCase()+":nth-of-type("+n+")");el=el.parentElement}return "body > "+parts.join(" > ")};
+  const nodes=[...document.querySelectorAll("main h1,main h2,main h3,main p,main li,main a,main button,header .brand-copy strong,header .brand-copy small,footer p,footer a")].filter(el=>!el.closest("#jna-visual-toolbar"));
+  nodes.forEach((el,i)=>{el.dataset.jnaEditId=String(i);el.dataset.jnaEditSelector=selectorPath(el);el.dataset.jnaEditable="true"});
+  const imgs=[...document.querySelectorAll("main img")];
+  imgs.forEach((el,i)=>{el.dataset.jnaImageId=String(i);el.dataset.jnaImageSelector=selectorPath(el);el.dataset.jnaImage="true"});
+  const rows=await sb.from("jna_site_drafts").select("content_key,content_value").like("content_key","visual:"+slug+":%");
+  if(rows.data)rows.data.forEach(row=>{
+    const v=row.content_value||{},id=row.content_key.split(":").slice(2).join(":");
+    if(v.deleted)return;
+    if(v.kind==="text"){const el=nodes.find(n=>n.dataset.jnaEditId===id);if(el)el.textContent=v.value}
+    if(v.kind==="image"){const el=imgs.find(n=>n.dataset.jnaImageId===id);if(el)el.src=v.value}
+  });
+  const setEdit=on=>{
+    editing=on;document.body.classList.toggle("jna-editing",on);
+    nodes.forEach(el=>{el.contentEditable=on?"true":"false";el.spellcheck=on});
+    status.textContent=on?"Tap text to edit. Tap an outlined image to replace its URL.":"View mode";
+    bar.querySelector('[data-action="edit"]').textContent=on?"Editing…":"Edit Page";
+  };
+  bar.addEventListener("click",async e=>{
+    const action=e.target.dataset.action;if(!action)return;
+    if(action==="edit"){setEdit(!editing);return}
+    if(action==="exit"){setEdit(false);bar.remove();style.remove();document.body.style.paddingBottom="";return}
+    if(action==="save"||action==="publish"){
+      const payload=[];
+      nodes.forEach(el=>{if(el.dataset.jnaOriginalText!==el.textContent){payload.push({content_key:"visual:"+slug+":"+el.dataset.jnaEditId,content_value:{kind:"text",value:el.textContent,deleted:false},updated_by:session.user.id})}});
+      imgs.forEach(el=>{if(el.dataset.jnaOriginalSrc!==el.src){payload.push({content_key:"visual:"+slug+":"+el.dataset.jnaImageId,content_value:{kind:"image",value:el.getAttribute("src"),deleted:false},updated_by:session.user.id})}});
+      if(!payload.length){status.textContent="No changes to save.";return}
+      const {error}=await sb.from("jna_site_drafts").upsert(payload);
+      if(error){status.textContent="Save failed: "+error.message;return}
+      nodes.forEach(el=>el.dataset.jnaOriginalText=el.textContent);
+      imgs.forEach(el=>el.dataset.jnaOriginalSrc=el.getAttribute("src"));
+      if(action==="publish"){
+        const {error:publishError}=await sb.rpc("jna_publish_drafts");
+        status.textContent=publishError?"Draft saved, publish failed: "+publishError.message:"Changes published successfully. Refresh the page to verify.";
+      }else status.textContent="Draft saved. Visitors will not see it until Publish.";
+    }
+  });
+  nodes.forEach(el=>el.dataset.jnaOriginalText=el.textContent);
+  imgs.forEach(el=>el.dataset.jnaOriginalSrc=el.getAttribute("src"));
+  document.addEventListener("click",e=>{
+    if(!editing)return;const img=e.target.closest("img[data-jna-image=true]");if(!img)return;
+    e.preventDefault();e.stopPropagation();const url=prompt("Paste the new image URL",img.getAttribute("src")||"");
+    if(url){img.src=url;dirty=true;status.textContent="Image changed. Click Save Draft or Publish."}
+  },true);
+  nodes.forEach(el=>el.addEventListener("input",()=>{status.textContent="Text changed. Click Save Draft or Publish."}));
+  setEdit(false);
+ }catch(err){console.warn("JNA visual editor unavailable",err)}
+})();
