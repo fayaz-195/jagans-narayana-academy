@@ -393,3 +393,132 @@ body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}
 
 /* Premium home-first redesign — JNA forest green / orange identity */
 .hero-reimagined{position:relative;isolation:isolate;overflow:hidden;padding:88px 0 24px;background:radial-gradient(ellipse at 83% 18%,#e6f0e9 0,transparent 34%),linear-gradient(115deg,#f8faf8 0%,#fff 58%,#f1f6f2 100%)}.hero-reimagined:after{content:"";position:absolute;z-index:-1;width:520px;height:520px;border:1px solid #dce9e0;border-radius:50%;right:-240px;top:-190px;box-shadow:0 0 0 42px #eaf2ec70,0 0 0 84px #edf4ef55}.hero-grid{grid-template-columns:1.03fr .97fr;gap:58px;align-items:center}.hero-copy{padding:20px 0 35px}.hero-copy .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid #dce8df;border-radius:30px;background:#ffffffb8;color:#42685a;font-size:9px;font-weight:800;letter-spacing:.16em}.hero-copy .eyebrow i{width:7px;height:7px;border-radius:50%;background:#f36b12;box-shadow:0 0 0 4px #f36b1220}.hero-overline{margin:26px 0 13px!important;color:#f36b12!important;font-size:10px!important;letter-spacing:.2em;font-weight:800}.hero-reimagined h1{font:800 clamp(52px,6.3vw,82px)/.99 Manrope,sans-serif;letter-spacing:-.065em;color:#063f37;margin:0}.hero-reimagined h1 em{font-style:normal;color:#008b7b}.hero-lead{max-width:510px;font-size:15px;line-height:1.9;color:#66776f;margin:24px 0 28px}.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.btn-primary{background:#063f37;box-shadow:0 10px 24px #063f3724}.btn-primary:hover{background:#008b7b;transform:translateY(-2px)}.text-link{font-weight:800;font-size:12px;color:#063f37}.hero-proof{margin-top:34px;padding-top:18px;border-top:1px solid #dce8e0;color:#73847c;font-size:10px;letter-spacing:.04em}.proof-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#f36b12;margin:0 8px 1px 0}.new-hero-art{position:relative;height:530px;max-width:540px;width:100%;margin-left:auto}.hero-photo-frame{position:absolute;inset:0 26px 28px 0;border-radius:8px 110px 8px 8px;overflow:hidden;background:#dbe8df;box-shadow:0 26px 65px #063f3720}.hero-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.hero-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,#052e2910 35%,#052e29c9 100%)}.hero-photo-caption{position:absolute;left:36px;bottom:38px;color:#fff;display:flex;flex-direction:column;gap:13px}.hero-photo-caption span{font-size:9px;font-weight:800;letter-spacing:.2em;color:#ffd0aa}.hero-photo-caption b{font:800 clamp(34px,4vw,48px)/1.04 Manrope;letter-spacing:-.04em}.hero-floating-note{position:absolute;right:0;bottom:72px;display:flex;flex-direction:column;gap:5px;padding:17px 20px;background:#fff;border-left:3px solid #f36b12;box-shadow:0 14px 35px #063f371c;border-radius:3px}.hero-floating-note b{font-size:9px;letter-spacing:.17em;color:#f36b12}.hero-floating-note span{font-size:11px;color:#063f37;font-weight:700}.hero-image-index{position:absolute;right:42px;top:22px;color:#fff;font-size:10px;font-weight:800;letter-spacing:.16em;text-shadow:0 2px 8px #0007}.hero-image-index i{font-style:normal;color:#ffb477;margin:0 7px}.hero-bottom{border-top:1px solid #dce8e0;margin-top:42px;padding:16px 0;color:#819188;font-size:9px;letter-spacing:.17em;font-weight:800}.quick-strip{background:#063f37;color:#fff}.strip-grid>div strong{color:#fff}.strip-grid>div span{color:#b8d0c5}.strip-message{color:#ffb477}.visual-pathways{background:#f4f7f4}.section-heading h2{letter-spacing:-.045em}.pathway-slide{border-radius:8px;box-shadow:0 18px 48px #063f3710}.pathway-slide img{filter:saturate(.88)}.programme-card{border-radius:7px;box-shadow:0 8px 28px #063f3708}.programme-card:hover{box-shadow:0 18px 42px #063f3717}.groups-section{background:#f4f7f4}.coaching-card{border-radius:7px}.contact-panel{border-radius:7px;box-shadow:0 22px 50px #063f3720}@media(max-width:950px){.hero-grid{grid-template-columns:1fr 1fr;gap:28px}.new-hero-art{height:460px}}@media(max-width:680px){.hero-reimagined{padding:48px 0 18px}.hero-grid{grid-template-columns:1fr;gap:24px}.hero-reimagined h1{font-size:clamp(48px,13vw,66px)}.hero-lead{font-size:13px;margin:18px 0 22px}.new-hero-art{height:390px;max-width:100%;margin:0}.hero-photo-frame{inset:0 18px 22px 0;border-radius:7px 75px 7px 7px}.hero-photo-caption{left:22px;bottom:25px}.hero-floating-note{bottom:50px;padding:13px 15px}.hero-bottom{margin-top:16px}.hero-proof{margin-top:23px}}
+
+
+/* INTERNATIONAL SCHOOL EDITION — JNA homepage visual direction */
+body{color:#17332d;background:#fff}
+.topline{background:#062f2a;color:#dcebe5}
+.site-header{height:86px;background:#fff;border-bottom:1px solid #e7eee9;box-shadow:none}
+.nav-wrap{width:min(1360px,calc(100% - 72px))}
+.brand-mark{width:50px;height:50px;border-radius:4px;background:#073d35;color:#fff;border:0;outline:0;box-shadow:none}
+.brand-mark:after{display:none}
+.brand-copy strong{font-size:13px;letter-spacing:.15em}
+.brand-copy small{font-size:9px;letter-spacing:.2em;color:#d9651b}
+.nav-links{gap:clamp(10px,1.25vw,21px);color:#29483f}
+.nav-links .nav-cta{background:#f36b12;border-radius:2px;padding:15px 21px;box-shadow:none}
+.nav-drop{color:#29483f}
+.hero-reimagined{padding:0;background:#f7f8f4;min-height:650px;display:flex;align-items:center;overflow:hidden}
+.hero-reimagined:after{display:none}
+.hero-reimagined:before{content:"";position:absolute;inset:0 0 0 48%;z-index:0;background:linear-gradient(90deg,#f7f8f4 0%,rgba(247,248,244,.82) 10%,rgba(247,248,244,.06) 42%,rgba(5,42,35,.28) 100%);pointer-events:none}
+.hero-grid{width:min(1360px,calc(100% - 72px));min-height:610px;grid-template-columns:1fr;display:block;position:relative;padding:90px 0 68px}
+.hero-copy{position:relative;z-index:3;max-width:650px;padding:0}
+.hero-copy .eyebrow{border:0;border-radius:0;padding:0;background:transparent;color:#557168;font-size:10px;letter-spacing:.19em}
+.hero-copy .eyebrow i{background:#f36b12}
+.hero-overline{margin:30px 0 15px!important;font-size:10px!important;letter-spacing:.22em!important;color:#d9651b!important}
+.hero-reimagined h1{font:700 clamp(56px,6.4vw,88px)/.99 Manrope,sans-serif;letter-spacing:-.07em;color:#073d35;max-width:650px}
+.hero-reimagined h1 em{color:#d9651b}
+.hero-lead{max-width:520px;font-size:16px;line-height:1.85;color:#596d65;margin:25px 0 30px}
+.hero-actions{gap:28px}
+.btn-primary{background:#073d35;border-radius:2px;padding:17px 24px;box-shadow:none}
+.btn-primary:hover{background:#f36b12}
+.text-link{font-size:12px;color:#073d35;border-bottom:1px solid #b9c9c0;padding-bottom:7px}
+.hero-proof{border-top:1px solid #dce5df;max-width:510px;padding-top:17px;color:#6f8179}
+.new-hero-art{position:absolute;z-index:1;right:0;top:0;width:58%;height:100%;max-width:none;margin:0}
+.hero-photo-frame{inset:0;border-radius:0;box-shadow:none;background:#cbd8cf}
+.hero-photo-frame img{object-fit:cover;object-position:center 43%;filter:saturate(.78)}
+.hero-photo-shade{background:linear-gradient(0deg,rgba(3,39,32,.62),transparent 42%),linear-gradient(90deg,rgba(247,248,244,.16),transparent 38%)}
+.hero-photo-caption{left:auto;right:7%;bottom:9%;gap:12px;text-align:right;align-items:flex-end}
+.hero-photo-caption span{font-size:9px;letter-spacing:.24em;color:#f7c49e}
+.hero-photo-caption b{font:700 clamp(27px,3.2vw,44px)/1.04 Manrope;letter-spacing:-.045em}
+.hero-floating-note{right:5%;bottom:32%;padding:17px 21px;border-left:3px solid #f36b12;border-radius:0;box-shadow:0 12px 35px #062f2a24}
+.hero-image-index{right:7%;top:7%;font-size:10px;letter-spacing:.22em}
+.hero-bottom{position:relative;z-index:4;width:min(1360px,calc(100% - 72px));margin:0 auto;padding:18px 0;background:#f7f8f4;border-top:1px solid #dfe7e1;color:#75877f}
+.quick-strip{background:#073d35;border:0}
+.strip-grid{width:min(1240px,calc(100% - 72px));min-height:112px}
+.strip-grid>div:not(:last-child){border-color:#ffffff30}
+.strip-grid strong{font:700 24px Manrope;color:#fff}
+.strip-grid span{color:#c4d5cd}
+.strip-message{font:600 14px Manrope;color:#f6b17e}
+.visual-pathways{padding:100px 0 92px;background:#f3f6f2}
+.section-heading{margin-bottom:42px}
+.section-heading h2,.groups-intro h2{font-weight:700;letter-spacing:-.06em}
+.section-heading h2 em,.groups-intro h2 em{color:#d9651b}
+.pathway-track{grid-auto-columns:minmax(82%,980px);gap:22px}
+.pathway-slide{grid-template-columns:1.15fr .85fr;min-height:390px;border:0;border-radius:0;box-shadow:0 18px 50px #073d3510}
+.pathway-slide img{min-height:390px;filter:none}
+.pathway-copy{padding:clamp(30px,5vw,60px)}
+.pathway-copy h3{font-weight:700;letter-spacing:-.055em}
+.pathway-copy a{color:#d9651b}
+.slider-controls button{border-radius:2px}
+.programmes-section{padding-top:100px;padding-bottom:100px}
+.programme-grid{gap:0;border-top:1px solid #dfe8e2;border-bottom:1px solid #dfe8e2}
+.programme-card{min-height:275px;border:0;border-right:1px solid #dfe8e2;border-radius:0;padding:28px 25px;background:#fff;box-shadow:none}
+.programme-card:last-child{border-right:0}
+.programme-card:hover{transform:translateY(-4px);box-shadow:none;background:#f7f9f6}
+.programme-icon{width:auto;height:auto;display:block;margin:30px 0 18px;padding:0;background:none!important;color:#d9651b!important;border-radius:0;font:700 19px Manrope}
+.programme-card h3{font-size:21px;letter-spacing:-.035em}
+.card-link{color:#d9651b}
+.groups-section{background:#f3f6f2;padding:100px 0}
+.groups-layout{gap:100px}
+.groups-list>a{padding:23px 4px}
+.group-code{color:#d9651b}
+.coaching-section{padding-top:100px;padding-bottom:100px}
+.coaching-grid{gap:0;border-top:1px solid #dfe8e2;border-bottom:1px solid #dfe8e2}
+.coaching-card{min-height:240px;border:0;border-right:1px solid #dfe8e2;border-radius:0;background:#fff;padding:28px 22px}
+.coaching-card:last-child{border-right:0}
+.coaching-card:hover{transform:none;background:#f7f9f6;box-shadow:none}
+.coaching-tag{color:#d9651b}
+.coaching-card h3{font-size:34px;font-weight:700;letter-spacing:-.06em}
+.coaching-card>span:last-child{color:#073d35}
+.competitive-note{border-radius:0;background:#073d35;padding:30px 34px}
+.approach-section{background:#073d35;padding:100px 0}
+.approach-section h2 em{color:#f3a16a}
+.contact-section{padding:0 0 100px;background:#f3f6f2}
+.contact-panel{border-radius:0;box-shadow:none;padding:60px 66px;background:#073d35}
+.contact-panel h2 em{color:#f3a16a}
+.btn-light{border-radius:2px}
+.footer{background:#fff;padding:35px 0}
+@media(max-width:950px){
+ .hero-reimagined{min-height:590px}
+ .hero-grid{min-height:550px;padding:76px 0 60px}
+ .new-hero-art{width:55%}
+ .hero-reimagined:before{inset:0 0 0 40%;background:linear-gradient(90deg,#f7f8f4 0%,rgba(247,248,244,.9) 15%,rgba(247,248,244,.1) 75%)}
+ .hero-copy{max-width:560px}
+ .groups-layout{gap:45px}
+}
+@media(max-width:680px){
+ .site-header{height:72px}
+ .nav-wrap{width:calc(100% - 34px)}
+ .hero-reimagined{min-height:0;display:block;padding:0}
+ .hero-reimagined:before{inset:0;background:linear-gradient(180deg,#f7f8f4 0%,#f7f8f4 46%,rgba(247,248,244,.78) 62%,rgba(5,42,35,.12) 100%)}
+ .hero-grid{width:calc(100% - 34px);min-height:0;padding:54px 0 0}
+ .hero-copy{max-width:none;padding-bottom:22px}
+ .hero-reimagined h1{font-size:clamp(47px,12vw,64px)}
+ .hero-lead{font-size:14px;margin:18px 0 23px}
+ .new-hero-art{position:relative;top:auto;right:auto;width:calc(100% + 34px);height:300px;margin:0 -17px}
+ .hero-photo-frame{inset:0;border-radius:0}
+ .hero-photo-caption{right:20px;bottom:22px}
+ .hero-floating-note{right:16px;bottom:85px;padding:12px 14px}
+ .hero-image-index{right:20px;top:17px}
+ .hero-bottom{width:calc(100% - 34px);font-size:8px;margin-top:0}
+ .strip-grid{width:calc(100% - 34px);grid-template-columns:repeat(2,1fr);min-height:0;padding:22px 0}
+ .strip-grid>div:not(:last-child){border:0}
+ .strip-message{grid-column:1/-1;padding:0}
+ .visual-pathways,.programmes-section,.groups-section,.coaching-section{padding:64px 0}
+ .pathway-track{grid-auto-columns:92%;gap:12px}
+ .pathway-slide{grid-template-columns:1fr;grid-template-rows:205px auto;min-height:0}
+ .pathway-slide img{height:205px;min-height:205px}
+ .pathway-copy{padding:24px}
+ .programme-grid,.coaching-grid{grid-template-columns:1fr 1fr;border-bottom:0}
+ .programme-card,.coaching-card{border-right:0;border-bottom:1px solid #dfe8e2;padding:19px 15px;min-height:215px}
+ .programme-card:nth-child(odd),.coaching-card:nth-child(odd){border-right:1px solid #dfe8e2}
+ .programme-icon{margin:24px 0 14px;font-size:17px}
+ .programme-card h3{font-size:16px}
+ .programme-card p,.coaching-card p{font-size:10px}
+ .coaching-card h3{font-size:27px;margin:22px 0 8px}
+ .groups-layout{grid-template-columns:1fr;gap:26px}
+ .approach-section{padding:68px 0}
+ .contact-section{padding-bottom:60px}
+ .contact-panel{padding:34px 24px}
+}
+@media(prefers-reduced-motion:reduce){.hero h1,.hero-copy .eyebrow,.hero-lead,.hero-actions,.hero-art{animation:none!important}}
