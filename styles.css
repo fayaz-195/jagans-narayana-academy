@@ -878,3 +878,70 @@ body{color:#17332d;background:#fff}
 @media(max-width:390px){
  .jna-about-pillars,.jna-about-path-grid{grid-template-columns:1fr}
 }
+
+
+/* Founder page — JNA editorial leadership layout */
+.jna-founder-page{overflow:hidden}
+.jna-founder-hero{background:#f7f7f2;padding:48px 0 65px}
+.jna-founder-hero-grid{display:grid;grid-template-columns:1fr .9fr;gap:65px;align-items:center}
+.jna-founder-intro .breadcrumb{margin-bottom:34px;color:#7b8982;font:800 10px "DM Sans";letter-spacing:.14em}
+.jna-founder-intro .breadcrumb a{color:#00604d;text-decoration:none}
+.jna-founder-intro .breadcrumb span{color:#f36b12;padding:0 8px}
+.jna-founder-kicker{display:block;color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.18em;margin-bottom:16px}
+.jna-founder-intro h1,.jna-founder-message h2,.jna-founder-section-head h2,.jna-founder-cta h2{margin:0 0 20px;color:#06483c;font:800 clamp(43px,5vw,69px)/1 Manrope;letter-spacing:-.07em}
+.jna-founder-intro h1 em,.jna-founder-message h2 em,.jna-founder-section-head h2 em,.jna-founder-cta h2 em{font-style:normal;color:#f36b12}
+.jna-founder-intro>p{max-width:490px;margin:0 0 27px;color:#65736d;font:400 15px/1.8 "DM Sans"}
+.jna-founder-button{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:49px;padding:0 21px;background:#005343;border-radius:6px;color:#fff;text-decoration:none;font:800 12px "DM Sans"}
+.jna-founder-button:hover{background:#f36b12}
+.jna-founder-portrait-panel{position:relative;min-height:430px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(140deg,#0a5848,#06372f)}
+.jna-founder-portrait-panel:before,.jna-founder-portrait-panel:after{content:"";position:absolute;border:1px solid #ffffff25;border-radius:50%;width:330px;height:330px}
+.jna-founder-portrait-panel:after{width:430px;height:430px}
+.jna-founder-monogram{position:relative;z-index:1;display:grid;place-items:center;width:180px;height:180px;border:1px solid #ffffff65;border-radius:50%;color:#fff;font:800 76px Manrope;letter-spacing:-.09em}
+.jna-founder-monogram span{position:absolute;bottom:37px;right:28px;color:#f7a06a;font:800 12px "DM Sans";letter-spacing:.12em}
+.jna-founder-portrait-caption{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-direction:column;gap:7px;padding:23px 26px;background:#032d26e8;color:#fff}
+.jna-founder-portrait-caption span{color:#ffae7d;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-founder-portrait-caption b{font:800 25px Manrope}
+.jna-founder-portrait-caption small{color:#c5d8d0;font:400 11px "DM Sans"}
+.jna-founder-side-note{position:absolute;right:17px;top:20px;writing-mode:vertical-rl;color:#d1e1da;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-founder-message{padding:86px 0;background:#fff}
+.jna-founder-message-grid{display:grid;grid-template-columns:.55fr 1fr;gap:65px}
+.jna-founder-overline{color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.16em}
+.jna-founder-message h2,.jna-founder-section-head h2,.jna-founder-cta h2{font-size:clamp(35px,4vw,53px);margin-bottom:18px}
+.jna-founder-message p,.jna-founder-section-head>p,.jna-founder-cta p{max-width:650px;color:#65736d;font:400 14px/1.85 "DM Sans";margin:0}
+.jna-founder-signature{display:flex;flex-direction:column;gap:4px;margin-top:28px;color:#06483c;font:italic 700 23px Georgia}
+.jna-founder-signature small{color:#7a8982;font:600 10px "DM Sans";font-style:normal;letter-spacing:.05em}
+.jna-founder-values{padding:82px 0;background:#06483c}
+.jna-founder-section-head{display:flex;justify-content:space-between;align-items:end;gap:45px;margin-bottom:35px}
+.jna-founder-section-head h2{color:#fff}
+.jna-founder-section-head>p{max-width:420px;color:#d0e2da;margin-bottom:4px}
+.jna-founder-value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff35;border:1px solid #ffffff35}
+.jna-founder-value-grid article{position:relative;min-height:225px;padding:28px;background:#075345}
+.jna-founder-value-grid article>span{position:absolute;right:23px;top:22px;color:#a5c1b6;font:800 10px "DM Sans";letter-spacing:.12em}
+.jna-founder-value-grid article>div{display:grid;place-items:center;width:44px;height:44px;margin:5px 0 20px;border-radius:50%;background:#ffffff18;color:#ff9e67;font-size:23px}
+.jna-founder-value-grid h3{margin:0 0 10px;color:#fff;font:800 19px Manrope}
+.jna-founder-value-grid p{max-width:300px;margin:0;color:#c7d9d1;font:400 12px/1.7 "DM Sans"}
+.jna-founder-cta{padding:76px 0;background:#fff0e4;border-top:5px solid #f36b12}
+.jna-founder-cta>.container{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.jna-founder-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:15px;flex-shrink:0}
+.jna-founder-cta-actions>a:last-child{color:#06483c;text-decoration:none;font:800 13px "DM Sans"}
+@media(max-width:850px){
+ .jna-founder-hero-grid{grid-template-columns:1fr 1fr;gap:30px}
+ .jna-founder-portrait-panel{min-height:370px}
+ .jna-founder-section-head{display:block}
+ .jna-founder-section-head>p{margin-top:15px}
+}
+@media(max-width:650px){
+ .jna-founder-hero{padding:30px 0 45px}
+ .jna-founder-hero-grid{grid-template-columns:1fr;gap:27px}
+ .jna-founder-intro .breadcrumb{margin-bottom:25px}
+ .jna-founder-intro h1{font-size:clamp(42px,11vw,59px)}
+ .jna-founder-intro>p{font-size:14px}
+ .jna-founder-portrait-panel{min-height:320px}
+ .jna-founder-message,.jna-founder-values,.jna-founder-cta{padding:58px 0}
+ .jna-founder-message-grid{grid-template-columns:1fr;gap:18px}
+ .jna-founder-section-head{margin-bottom:24px}
+ .jna-founder-value-grid{grid-template-columns:1fr}
+ .jna-founder-value-grid article{min-height:185px;padding:23px}
+ .jna-founder-cta>.container{display:block}
+ .jna-founder-cta-actions{margin-top:23px}
+}
