@@ -105,6 +105,19 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     const controls=document.createElement("div");controls.className="jna-section-controls";
     controls.innerHTML='<button type="button" data-section-edit="'+i+'">Edit section</button>';
     section.prepend(controls);
+    const editButton=controls.querySelector("button");
+    editButton.addEventListener("click",ev=>{
+      ev.preventDefault();ev.stopPropagation();
+      const active=!section.classList.contains("jna-section-active");
+      section.classList.toggle("jna-section-active",active);
+      section.querySelectorAll("[data-jna-editable=true]").forEach(el=>{
+        el.dataset.jnaSectionEnabled=active?"1":"0";
+        el.contentEditable=active?"true":"false";
+        el.spellcheck=active;
+      });
+      editButton.textContent=active?"Done editing":"Edit section";
+      status.textContent=active?"Section selected. Tap a text item to edit it, or tap an image to replace it.":"Section editing closed.";
+    });
   });
   const sectionStyle=document.createElement("style");
   sectionStyle.textContent='.jna-section-controls{display:none;position:absolute;z-index:30;top:12px;right:12px}.jna-editing .jna-section-controls{display:block}.jna-section-controls button{border:0;border-radius:7px;padding:9px 12px;background:#f36b12;color:#fff;font:700 12px "DM Sans",sans-serif;box-shadow:0 3px 12px #0002}.jna-editing main>section,.jna-editing main section.section,.jna-editing main .visual-pathways,.jna-editing main .quick-strip{position:relative}.jna-section-active{outline:2px dashed #008b7b;outline-offset:-5px}';
@@ -117,7 +130,7 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
   };
   document.addEventListener("click",e=>{
     const btn=e.target.closest("[data-section-edit]");
-    if(!btn||!editing)return;
+    if(!btn)return;
     e.preventDefault();e.stopPropagation();
     const id=btn.dataset.sectionEdit,section=sections.find(s=>s.dataset.jnaSectionId===id);if(!section)return;
     section.classList.toggle("jna-section-active");
