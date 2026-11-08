@@ -782,3 +782,13 @@ body{color:#17332d;background:#fff}
 @media(prefers-reduced-motion:reduce){
  .jna-smart-slider .jna-hero-image img,.jna-slider-dots button,.jna-slider-buttons>button{transition:none}
 }
+
+
+/* Keep slider controls fully visible above the overlapping academy-strengths bar */
+.jna-slider-controls{bottom:88px;z-index:8;box-shadow:0 8px 24px #001c1440}
+@media(max-width:1050px) and (min-width:681px){
+ .jna-slider-controls{bottom:82px}
+}
+@media(max-width:680px){
+ .jna-slider-controls{bottom:14px;z-index:8}
+}
