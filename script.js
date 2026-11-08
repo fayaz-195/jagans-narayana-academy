@@ -345,3 +345,25 @@ if ("IntersectionObserver" in window) {
     }else candidates.forEach(el=>el.classList.add("jna-is-visible"));
   }
 })();
+
+/* Bespoke academy hero artwork on inner pages */
+(function(){
+ const hero=document.querySelector(".page-hero .container,.jna-adm-hero .container,.jna-contact-hero .container");
+ if(!hero||hero.querySelector(".jna-hero-artwork"))return;
+ const page=location.pathname.split("/").pop().replace(".html","");
+ const themes={"about":["OUR APPROACH","Learning with purpose"],"founder":["LEADERSHIP","Guidance with direction"],"schooling":["SCHOOLING","Strong foundations"],"intermediate-mpc":["MPC PATHWAY","Think beyond limits"],"intermediate-bipc":["BiPC PATHWAY","Discover and explore"],"intermediate-mec":["MEC PATHWAY","Ideas into insight"],"intermediate-cec":["CEC PATHWAY","Understand the world"],"iit-jee":["IIT-JEE","Aim higher"],"neet":["NEET","Prepare with purpose"],"ca":["CA PATHWAY","Build your future"],"cma":["CMA PATHWAY","Numbers with purpose"],"faculty":["OUR FACULTY","Knowledge in motion"],"facilities":["CAMPUS LIFE","A place to grow"],"gallery":["ACADEMY MOMENTS","Learning in action"],"results":["ACHIEVEMENTS","Every step matters"],"testimonials":["STUDENT VOICES","Every journey counts"],"news-events":["ACADEMY LIFE","Ideas. Events. People."],"notices":["NOTICE BOARD","Stay informed"],"contact":["CONNECT WITH US","We are here to help"],"admissions":["ADMISSIONS","Your next chapter"]};
+ const theme=themes[page]||["JNA ACADEMY","Learn. Grow. Achieve."];
+ const art=document.createElement("div");art.className="jna-hero-artwork";art.setAttribute("aria-hidden","true");
+ art.innerHTML=`
+ <div class="jna-art-orbit jna-art-orbit-one"></div><div class="jna-art-orbit jna-art-orbit-two"></div><div class="jna-art-glow"></div>
+ <svg viewBox="0 0 560 500" role="presentation">
+ <defs><linearGradient id="jnaArtGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c7562"/><stop offset="1" stop-color="#063f37"/></linearGradient><linearGradient id="jnaArtOrange" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb36f"/><stop offset="1" stop-color="#f36b12"/></linearGradient><linearGradient id="jnaArtPaper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e6f0e9"/></linearGradient><filter id="jnaArtShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#063f37" flood-opacity=".18"/></filter></defs>
+ <circle cx="290" cy="242" r="190" fill="#e5f1e9"/><circle cx="290" cy="242" r="157" fill="none" stroke="#0a806d" stroke-opacity=".24" stroke-width="1.5" stroke-dasharray="4 9"/><path d="M108 365Q90 230 183 119Q282 2 412 105" fill="none" stroke="#f36b12" stroke-width="2" stroke-opacity=".65" stroke-dasharray="3 9"/>
+ <g class="jna-art-book" filter="url(#jnaArtShadow)"><path d="M135 285Q205 253 276 296V386Q205 343 135 378Z" fill="url(#jnaArtPaper)" stroke="#b7d0c0" stroke-width="2"/><path d="M276 296Q346 253 417 285V378Q346 343 276 386Z" fill="#fff" stroke="#b7d0c0" stroke-width="2"/><path d="M276 296V386" stroke="#8bb39b" stroke-width="3"/><path d="M159 310Q209 291 249 315M159 331Q207 313 249 336M302 315Q350 291 393 310M302 336Q350 313 393 331" fill="none" stroke="#9dbdaa" stroke-width="4" stroke-linecap="round"/></g>
+ <g class="jna-art-cap" filter="url(#jnaArtShadow)"><path d="M180 166L292 119L410 166L292 214Z" fill="url(#jnaArtGreen)"/><path d="M219 184V226Q292 270 365 226V184L292 214Z" fill="#0a5a4c"/><path d="M410 166V219" stroke="#f36b12" stroke-width="5" stroke-linecap="round"/><circle cx="410" cy="225" r="9" fill="#f36b12"/></g>
+ <g class="jna-art-orbital-dot"><circle cx="424" cy="102" r="22" fill="url(#jnaArtOrange)"/><path d="M416 102h16M424 94v16" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+ <g transform="translate(90 94)"><circle r="28" fill="#fff" filter="url(#jnaArtShadow)"/><path d="M-11 0L-2 9L13 -10" fill="none" stroke="#f36b12" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+ <g transform="translate(438 345)"><circle r="35" fill="#fff" filter="url(#jnaArtShadow)"/><path d="M-13 13V-11L0 -19L13 -11V13M-8 13V-2H8V13M-17 -11H17" fill="none" stroke="#0a806d" stroke-width="3" stroke-linejoin="round"/></g></svg>
+ <div class="jna-art-label"><span>JNA / ${theme[0]}</span><b>${theme[1]}</b><i>LEARN · GROW · ACHIEVE</i></div><span class="jna-art-spark jna-art-spark-a">✳</span><span class="jna-art-spark jna-art-spark-b">✦</span>`;
+ hero.appendChild(art);hero.classList.add("jna-has-artwork");
+})();
