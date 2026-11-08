@@ -753,3 +753,32 @@ body{color:#17332d;background:#fff}
  .jna-enquiry-wide,.jna-enquiry-consent,.jna-enquiry-form>button,.jna-enquiry-form>small{grid-column:1}
  .jna-map-frame{height:280px}
 }
+
+
+/* Smart hero slider controls and transitions */
+.jna-smart-slider .jna-hero-image img{transition:opacity .35s ease,transform .8s ease}
+.jna-smart-slider .jna-hero-image img.is-changing{opacity:.35;transform:scale(1.025)}
+.jna-slider-controls{position:absolute;z-index:4;left:19%;right:30px;bottom:25px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;background:#063f37e8;border:1px solid #ffffff30;border-radius:9px;backdrop-filter:blur(12px);color:#fff}
+.jna-slider-status{display:flex;align-items:center;gap:10px;font:800 10px "DM Sans";letter-spacing:.12em;white-space:nowrap}
+.jna-slider-progress{display:block;width:74px;height:2px;background:#ffffff55;overflow:hidden}
+.jna-slider-progress i{display:block;width:0;height:100%;background:#f36b12}
+.jna-slider-buttons{display:flex;align-items:center;gap:8px}
+.jna-slider-buttons>button{display:grid;place-items:center;width:32px;height:32px;border:1px solid #ffffff70;border-radius:50%;background:transparent;color:#fff;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s}
+.jna-slider-buttons>button:hover,.jna-slider-buttons>button:focus-visible{background:#f36b12;border-color:#f36b12;outline:none}
+.jna-slider-dots{display:flex;align-items:center;gap:6px;padding:0 4px}
+.jna-slider-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#ffffff75;cursor:pointer;transition:width .2s,background .2s}
+.jna-slider-dots button.active{width:22px;border-radius:8px;background:#f36b12}
+@media(max-width:1050px){
+ .jna-slider-controls{left:18%;right:20px;bottom:18px;padding:10px 12px}
+}
+@media(max-width:680px){
+ .jna-slider-controls{left:14px;right:14px;bottom:14px;gap:8px;padding:9px 10px}
+ .jna-slider-status{gap:6px;font-size:9px}
+ .jna-slider-progress{width:40px}
+ .jna-slider-buttons{gap:5px}
+ .jna-slider-buttons>button{width:29px;height:29px}
+ .jna-slider-dots{gap:5px}
+}
+@media(prefers-reduced-motion:reduce){
+ .jna-smart-slider .jna-hero-image img,.jna-slider-dots button,.jna-slider-buttons>button{transition:none}
+}
