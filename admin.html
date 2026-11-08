@@ -14,7 +14,7 @@
 <div class="app-layout"><aside class="sidebar"><div class="side-label">WORKSPACE</div><button class="navbtn active" data-view="overview"><span class="ico">⌂</span>Dashboard</button><button class="navbtn" data-view="pages"><span class="ico">▤</span>Page Manager</button><button class="navbtn" data-view="programmes"><span class="ico">◇</span>Courses & Programmes</button><button class="navbtn" data-view="notices"><span class="ico">▣</span>Notices & Events</button><button class="navbtn" data-view="media"><span class="ico">▧</span>Media & Links</button><button class="navbtn" data-view="publish"><span class="ico">↗</span>Drafts & Publish</button><button class="navbtn" data-view="settings"><span class="ico">⚙</span>Settings</button><div class="side-bottom">Changes are saved as drafts first. Publish only after reviewing the preview.</div></aside><main class="main"><div class="page-head"><div><div class="eyebrow" id="crumb">OVERVIEW / CONTROL CENTRE</div><h1 id="viewTitle">Dashboard</h1><p id="viewDesc">A clear view of your academy website content.</p></div><a class="btn light" href="index.html" target="_blank" rel="noopener">View live website ↗</a></div><div id="viewContent"></div></main></div></div><div id="toast" class="toast hidden" role="status"></div>
 <script type="module">
 const SUPABASE_URL="https://stpripgumzxwwblocecs.supabase.co";
-const SUPABASE_KEY="sb_publishable_T9S1AjS5mk5GhPeuet7w_HJ5LYJUh";
+const SUPABASE_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
 const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.1/+esm");
 const db=createClient(SUPABASE_URL,SUPABASE_KEY);
 const $=id=>document.getElementById(id);
