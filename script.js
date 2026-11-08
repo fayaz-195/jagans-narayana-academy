@@ -135,3 +135,12 @@ if ("IntersectionObserver" in window) {
   });
 })();
 
+
+// Horizontal image slider controls for the homepage learning pathways.
+(() => {
+  const track=document.querySelector(".pathway-track");
+  if(!track)return;
+  const move=direction=>track.scrollBy({left:direction*Math.min(track.clientWidth*.86,760),behavior:"smooth"});
+  document.querySelector(".pathway-prev")?.addEventListener("click",()=>move(-1));
+  document.querySelector(".pathway-next")?.addEventListener("click",()=>move(1));
+})();
