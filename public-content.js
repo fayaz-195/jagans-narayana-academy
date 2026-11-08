@@ -115,13 +115,25 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     status.textContent=on?"Choose Edit section, then click text or an image to change it.":"View mode";
     bar.querySelector('[data-action="edit"]').textContent=on?"Editing…":"Edit Page";
   };
-  bar.addEventListener("click",e=>{
-    const id=e.target.dataset.sectionEdit;if(id===undefined)return;
-    const section=sections.find(s=>s.dataset.jnaSectionId===id);if(!section)return;
+  document.addEventListener("click",e=>{
+    const btn=e.target.closest("[data-section-edit]");
+    if(!btn||!editing)return;
+    e.preventDefault();e.stopPropagation();
+    const id=btn.dataset.sectionEdit,section=sections.find(s=>s.dataset.jnaSectionId===id);if(!section)return;
     section.classList.toggle("jna-section-active");
-    section.querySelectorAll("[data-jna-editable=true]").forEach(el=>{el.contentEditable=section.classList.contains("jna-section-active")?"true":"false"});
-    status.textContent=section.classList.contains("jna-section-active")?"This section is editable. Make changes, then Save Draft or Publish.":"Section editing closed.";
-  });
+    const active=section.classList.contains("jna-section-active");
+    section.querySelectorAll("[data-jna-editable=true]").forEach(el=>{el.dataset.jnaSectionEnabled=active?"1":"0"});
+    btn.textContent=active?"Done editing":"Edit section";
+    status.textContent=active?"Section selected. Tap any orange-outlined text to edit it; tap an image to replace it.":"Section editing closed.";
+  },true);
+  document.addEventListener("click",e=>{
+    if(!editing)return;
+    const el=e.target.closest("[data-jna-editable=true]");
+    if(!el||el.closest("#jna-visual-toolbar")||el.dataset.jnaSectionEnabled!=="1")return;
+    e.preventDefault();e.stopPropagation();
+    const next=prompt("Edit this text. Keep it concise:",el.innerText||el.textContent||"");
+    if(next!==null){el.textContent=next;status.textContent="Text updated on page. Tap Save Draft or Publish."}
+  },true);
   bar.addEventListener("click",async e=>{
     const action=e.target.dataset.action;if(!action)return;
     if(action==="edit"){setEdit(!editing);return}
