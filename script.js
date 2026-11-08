@@ -272,3 +272,47 @@ if ("IntersectionObserver" in window) {
   render(0);
   start();
 })();
+
+/* Site-wide premium footer */
+(function(){
+  const oldFooter=document.querySelector("footer.footer");
+  if(!oldFooter) return;
+  oldFooter.className="jna-site-footer";
+  oldFooter.innerHTML=`
+    <div class="jna-footer-enquiry"><div class="container jna-footer-enquiry-inner">
+      <div><span>LET'S CONNECT</span><h2>Have a question? We're here to help.</h2></div>
+      <form class="jna-footer-form" id="jnaFooterEnquiry">
+        <input name="name" type="text" placeholder="Name" aria-label="Name" required>
+        <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" pattern="[0-9+() -]{8,18}" required>
+        <input name="email" type="email" placeholder="Email (optional)" aria-label="Email (optional)">
+        <button type="submit">Send Enquiry <span>↗</span></button>
+      </form>
+    </div></div>
+    <div class="container jna-footer-main">
+      <div class="jna-footer-about">
+        <a class="jna-footer-brand" href="index.html"><span>JNA</span><b>JAGAN SIR'S<br><small>NARAYANA ACADEMY</small></b></a>
+        <p>Focused learning. Strong foundations. Brighter futures. Explore our academic pathways and connect with the academy.</p>
+      </div>
+      <div class="jna-footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Academy</a><a href="founder.html">Founder</a><a href="faculty.html">Faculty</a><a href="facilities.html">Facilities</a><a href="gallery.html">Gallery</a><a href="news-events.html">News & Events</a><a href="notices.html">Notices</a><a href="contact.html">Contact Us</a></div>
+      <div class="jna-footer-links"><h3>Courses</h3><a href="schooling.html">Schooling · Classes 1–10</a><a href="intermediate-mpc.html">MPC · IIT-JEE / EAPCET</a><a href="intermediate-bipc.html">BiPC · NEET / EAPCET</a><a href="intermediate-mec.html">MEC</a><a href="intermediate-cec.html">CEC</a><a href="iit-jee.html">IIT-JEE Coaching</a><a href="neet.html">NEET Coaching</a><a href="ca.html">CA</a><a href="cma.html">CMA</a></div>
+      <div class="jna-footer-contact"><h3>Contact Us</h3>
+        <p><span class="jna-footer-icon">⌖</span><span>Sama Street, Road No. 2,<br>Badangpet, Balapur Mandal,<br>Ranga Reddy District – 500058</span></p>
+        <a href="tel:+919133444384"><span class="jna-footer-icon">☎</span>+91 91334 44384</a>
+        <a href="https://wa.me/919133444384" target="_blank" rel="noopener"><span class="jna-footer-icon">◉</span>WhatsApp the academy</a>
+        <a href="contact.html"><span class="jna-footer-icon">↗</span>Contact & directions</a>
+      </div>
+    </div>
+    <div class="jna-footer-bottom"><div class="container"><span>© <span class="jna-footer-year"></span> Jagan Sir's Narayana Academy. All rights reserved.</span><div><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div></div></div>`;
+  const year=oldFooter.querySelector(".jna-footer-year");
+  if(year) year.textContent=new Date().getFullYear();
+  const form=oldFooter.querySelector("#jnaFooterEnquiry");
+  form?.addEventListener("submit",function(event){
+    event.preventDefault();
+    const data=new FormData(form);
+    const name=String(data.get("name")||"").trim();
+    const phone=String(data.get("phone")||"").trim();
+    const email=String(data.get("email")||"").trim();
+    const message="Hello Jagan Sir's Narayana Academy, I would like to make an enquiry.\nName: "+name+"\nPhone: "+phone+(email?"\nEmail: "+email:"");
+    window.open("https://wa.me/919133444384?text="+encodeURIComponent(message),"_blank","noopener");
+  });
+})();
