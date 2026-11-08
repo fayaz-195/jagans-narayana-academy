@@ -1375,3 +1375,34 @@ body{color:#17332d;background:#fff}
 .jna-testimonial-bottom-cta a{display:inline-flex;align-items:center;gap:20px;padding:12px 16px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
 @media(max-width:760px){.jna-testimonial-hero-inner{grid-template-columns:1fr;gap:15px;padding-top:42px;padding-bottom:35px}.jna-testimonial-hero-art{min-height:235px}.jna-quote-art{width:190px;height:190px}.jna-quote-art>b{font-size:20px}.jna-orbit{width:240px;height:240px}.jna-orbit-two{width:280px;height:280px}.jna-testimonial-heading{display:block}.jna-testimonial-heading>p{margin-top:14px}.jna-testimonial-grid{grid-template-columns:1fr 1fr}.jna-voice-feature{grid-column:span 2}.jna-testimonial-bottom-cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){.jna-testimonial-content{padding:52px 0 60px}.jna-testimonial-grid{grid-template-columns:1fr}.jna-voice-feature{grid-column:auto}.jna-voice-placeholder{min-height:155px}.jna-testimonial-note{display:block}.jna-testimonial-note>p{margin-top:8px}.jna-testimonial-bottom-cta{padding:23px 20px}}
+
+/* Intermediate group pages — shared premium stream layout */
+.jna-stream-hero{overflow:hidden;background:#063f37;color:#fff}
+.jna-stream-hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;min-height:350px;padding-top:48px;padding-bottom:48px}
+.jna-stream-eyebrow{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-stream-hero h1{margin:13px 0 9px;color:#fff;font:800 clamp(48px,6vw,70px)/.9 Manrope;letter-spacing:-.08em}
+.jna-stream-hero h1 em{color:#f36b12;font-style:normal}
+.jna-stream-full{color:#ffc49b;font:800 11px "DM Sans";letter-spacing:.06em}
+.jna-stream-hero p{max-width:460px;margin:15px 0 0;color:#d6e5df;font:400 13px/1.8 "DM Sans"}
+.jna-stream-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:230px}
+.jna-stream-art-card{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;width:min(100%,330px);min-height:205px;padding:23px;border:1px solid #ffffff55;border-radius:8px;background:linear-gradient(135deg,#0a6655,#06463d);box-shadow:0 18px 45px #001e183b}
+.jna-stream-art-card>span{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-stream-art-card strong{color:#fff;font:800 clamp(52px,7vw,76px)/.9 Manrope;letter-spacing:-.08em}
+.jna-stream-art-card small{color:#e5eee9;font:700 10px "DM Sans";letter-spacing:.1em}
+.jna-stream-art-orbit{position:absolute;width:270px;height:270px;border:1px solid #f36b1266;border-radius:50%}
+.jna-stream-section{padding:65px 0 78px;background:linear-gradient(180deg,#f7f9f6,#fff 330px)}
+.jna-stream-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start;margin-bottom:34px}
+.jna-stream-intro span,.jna-stream-next span{color:#e96b17;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-stream-intro h2{margin:8px 0 0;color:#103f34;font:800 clamp(27px,3.4vw,39px)/1.04 Manrope;letter-spacing:-.06em}
+.jna-stream-intro h2 em{color:#f36b12;font-style:normal}
+.jna-stream-intro p{margin:20px 0 0;color:#65766d;font:400 13px/1.9 "DM Sans"}
+.jna-stream-subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.jna-stream-subject{padding:21px;border:1px solid #e1e9e3;border-radius:8px;background:#fff;box-shadow:0 8px 24px #123d260a}
+.jna-stream-subject>span{display:grid;place-items:center;width:34px;height:34px;margin-bottom:25px;border-radius:6px;background:#edf4ef;color:#075345;font:800 10px Manrope}
+.jna-stream-subject h3{margin:0 0 8px;color:#174538;font:800 17px Manrope}
+.jna-stream-subject p{margin:0;color:#75837b;font:400 11px/1.8 "DM Sans"}
+.jna-stream-next{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:34px;padding:25px 28px;border-radius:8px;background:#063f37;color:#fff}
+.jna-stream-next h2{margin:7px 0 0;color:#fff;font:800 22px Manrope}
+.jna-stream-next p{margin:6px 0 0;color:#d3e3dc;font:400 11px "DM Sans"}
+.jna-stream-next a{display:inline-flex;align-items:center;gap:18px;flex:0 0 auto;padding:12px 15px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+@media(max-width:700px){.jna-stream-hero-inner{grid-template-columns:1fr;gap:8px;padding-top:38px;padding-bottom:28px}.jna-stream-art{min-height:205px}.jna-stream-art-card{min-height:170px}.jna-stream-art-orbit{width:220px;height:220px}.jna-stream-intro{grid-template-columns:1fr;gap:0}.jna-stream-intro p{margin-top:12px}.jna-stream-subjects{grid-template-columns:1fr}.jna-stream-subject{padding:18px}.jna-stream-subject>span{margin-bottom:15px}.jna-stream-next{align-items:flex-start;flex-direction:column}}
