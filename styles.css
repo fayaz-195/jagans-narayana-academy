@@ -1619,3 +1619,34 @@ body{color:#17332d;background:#fff}
 .jna-notice-categories h3{margin:10px 0 7px;color:#174538;font:800 16px Manrope}
 .jna-notice-categories p{margin:0;color:#77867d;font:400 11px/1.7 "DM Sans"}
 @media(max-width:700px){.jna-updates-grid,.jna-notice-categories{grid-template-columns:1fr}.jna-updates-page .jna-updates-hero-art,.jna-updates-page .jna-notice-hero-art{min-height:280px}.jna-update-card{min-height:230px}}
+
+/* Reference-inspired JNA footer — academy palette */
+.jna-site-footer{margin-top:0;background:#063f37;color:#f5f8f5;font-family:"DM Sans",sans-serif}
+.jna-footer-enquiry{background:#0a5146;border-bottom:1px solid #ffffff20}
+.jna-footer-enquiry-inner{display:grid;grid-template-columns:.85fr 1.5fr;align-items:center;gap:30px;padding:30px 0}
+.jna-footer-enquiry-inner>div>span{color:#f5a15f;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-footer-enquiry-inner h2{margin:8px 0 0;color:#fff;font:800 20px/1.3 Manrope}
+.jna-footer-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:10px}
+.jna-footer-form input{width:100%;min-width:0;height:46px;padding:0 14px;border:1px solid #d7e3dd;border-radius:3px;background:#fff;color:#173d34;font:500 13px "DM Sans";outline:none}
+.jna-footer-form input:focus{border-color:#f36b12;box-shadow:0 0 0 2px #f36b1230}
+.jna-footer-form button{height:46px;padding:0 18px;border:0;border-radius:3px;background:#f36b12;color:#fff;cursor:pointer;font:800 12px "DM Sans";white-space:nowrap}
+.jna-footer-form button:hover{background:#db5b09}
+.jna-footer-main{display:grid;grid-template-columns:1.25fr .85fr 1.1fr 1.25fr;gap:38px;padding-top:48px;padding-bottom:46px}
+.jna-footer-brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.jna-footer-brand>span{display:grid;place-items:center;width:62px;height:62px;border:1px solid #f36b12;border-radius:50%;color:#f36b12;font:800 20px Manrope}
+.jna-footer-brand b{font:800 14px/1.35 Manrope;letter-spacing:.04em}
+.jna-footer-brand small{color:#f5a15f;font-size:10px;letter-spacing:.13em}
+.jna-footer-about p{max-width:280px;margin:22px 0 0;color:#d3e1da;font:400 13px/1.8 "DM Sans"}
+.jna-footer-main h3{margin:0 0 21px;color:#fff;font:800 20px Manrope}
+.jna-footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.jna-footer-links a,.jna-footer-contact>a{color:#e3eee8;text-decoration:none;font:500 12px/1.5 "DM Sans";transition:color .2s}
+.jna-footer-links a:before{content:"›";margin-right:10px;color:#f36b12;font-size:17px;font-weight:800}
+.jna-footer-links a:hover,.jna-footer-contact>a:hover{color:#f5a15f}
+.jna-footer-contact p,.jna-footer-contact>a{display:flex;align-items:flex-start;gap:12px;margin:0 0 16px;color:#e3eee8;font:500 12px/1.7 "DM Sans";text-decoration:none}
+.jna-footer-icon{flex:0 0 18px;color:#f5a15f;font-size:17px;line-height:1.2}
+.jna-footer-bottom{border-top:1px solid #ffffff25;background:#04352e}
+.jna-footer-bottom>.container{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:62px;color:#d0ded7;font:400 11px "DM Sans"}
+.jna-footer-bottom a{color:#f5a15f;text-decoration:none}
+.jna-footer-bottom>div>div{display:flex;gap:22px}
+@media(max-width:900px){.jna-footer-enquiry-inner{grid-template-columns:1fr}.jna-footer-main{grid-template-columns:repeat(2,1fr);gap:32px}}
+@media(max-width:560px){.jna-footer-enquiry-inner{padding:25px 0}.jna-footer-form{grid-template-columns:1fr 1fr}.jna-footer-form button{grid-column:span 2}.jna-footer-main{grid-template-columns:1fr;gap:28px;padding-top:35px;padding-bottom:35px}.jna-footer-bottom>.container{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.jna-footer-bottom>div>div{flex-wrap:wrap;gap:14px}}
