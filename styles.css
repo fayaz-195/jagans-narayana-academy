@@ -1256,3 +1256,56 @@ body{color:#17332d;background:#fff}
 .jna-archive-selected{padding:13px 15px}
 @media(max-width:900px){.jna-course-layout{grid-template-columns:1fr;max-width:720px}.jna-category-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.jna-archive-result-area-v2{max-width:620px;margin:24px auto 0}.jna-result-poster-v2{aspect-ratio:1.18}}
 @media(max-width:560px){.jna-category-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.jna-result-poster-v2{aspect-ratio:.94}.jna-poster-v2-copy h2{font-size:43px}}
+
+/* Results page — reference-inspired full-width archive layout */
+.jna-results-banner{overflow:hidden;background:#073f36;color:#fff}
+.jna-results-banner-inner{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:38px;min-height:285px;padding-top:28px;padding-bottom:28px}
+.jna-results-banner-inner>div:first-child>span{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-results-banner h1{margin:13px 0 10px;color:#fff;font:800 clamp(38px,5vw,62px)/.98 Manrope;letter-spacing:-.07em}
+.jna-results-banner h1 em{color:#f36b12;font-style:normal}
+.jna-results-banner p{margin:0;color:#d6e6df;font:500 13px/1.7 "DM Sans"}
+.jna-results-banner-art{height:225px;overflow:hidden;border:5px solid #fff;border-radius:100px 8px 8px 8px}
+.jna-results-banner-art img{width:100%;height:100%;object-fit:cover}
+.jna-archive-wrap{padding:48px 0 80px;background:linear-gradient(180deg,#f7f9f6,#fff 300px)}
+.jna-archive-heading{text-align:center;margin:0 auto 25px}
+.jna-archive-heading>span{color:#ed6b17;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-archive-heading h2{margin:7px 0;color:#0d211b;font:800 40px/1 Manrope;letter-spacing:-.06em}
+.jna-archive-heading p{margin:0;color:#6b7a71;font:400 13px "DM Sans"}
+.jna-year-select{display:flex;align-items:center;justify-content:center;gap:20px;margin:0 auto 32px}
+.jna-year-select>span,.jna-course-heading>div>span{color:#e96b17;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-year-tabs{display:flex;gap:8px;margin:0}
+.jna-year-tabs button{width:100px;height:40px;border:1px solid #dce6df;border-radius:5px;background:#fff;color:#173e33;font:800 12px "DM Sans";cursor:pointer}
+.jna-year-tabs button.is-active{background:#06483c;border-color:#06483c;color:#fff;box-shadow:0 5px 15px #06483c22}
+.jna-course-heading{display:flex;align-items:end;justify-content:space-between;max-width:1000px;margin:0 auto 16px}
+.jna-course-heading h3{margin:5px 0 0;color:#103f34;font:800 27px/1.1 Manrope;letter-spacing:-.05em}
+.jna-course-heading h3 em{color:#f36b12;font-style:normal}
+.jna-course-heading>small{padding:6px 9px;background:#fff0e4;color:#d85e12;font:800 9px "DM Sans";letter-spacing:.1em}
+.jna-category-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:1000px;margin:0 auto 30px}
+.jna-category-tabs button{min-width:105px;height:42px;padding:0 18px;border:1px solid #dce6df;border-radius:5px;background:#fff;color:#174538;font:800 12px "DM Sans";cursor:pointer;transition:.2s}
+.jna-category-tabs button:hover{border-color:#f36b12;color:#e86614}
+.jna-category-tabs button.is-active{background:#f36b12;border-color:#f36b12;color:#fff;box-shadow:0 5px 14px #f36b1227}
+.jna-results-poster-stage{max-width:900px;margin:0 auto}
+.jna-results-poster-landscape{position:relative;overflow:hidden;aspect-ratio:16/9;min-height:390px;padding:clamp(22px,4vw,42px);border:7px solid #fff;border-radius:8px;background:linear-gradient(115deg,#063f37 0%,#07594b 66%,#f36b12 66%,#e9630e 100%);box-shadow:0 16px 40px #0b38251c;color:#fff}
+.jna-results-poster-landscape:before{content:"";position:absolute;inset:12px;border:1px solid #ffffff55;pointer-events:none}
+.jna-landscape-brand,.jna-landscape-main,.jna-landscape-students,.jna-landscape-footer{position:relative;z-index:1}
+.jna-landscape-brand{display:flex;align-items:center;gap:10px}
+.jna-landscape-brand>span{display:grid;place-items:center;width:42px;height:42px;background:#fff;border-radius:4px;color:#06483c;font:800 15px Manrope}
+.jna-landscape-brand>b{font:800 10px/1.4 "DM Sans";color:#ffe0c7}
+.jna-landscape-brand>small{margin-left:auto;padding:7px 10px;border:1px solid #ffffff80;font:800 8px "DM Sans";letter-spacing:.12em}
+.jna-landscape-main{display:flex;justify-content:space-between;align-items:center;margin:25px 0 22px}
+.jna-landscape-main>div:first-child>span{color:#ffc69e;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-landscape-main h2{margin:6px 0 9px;color:#fff;font:800 clamp(38px,6vw,68px)/.9 Manrope;letter-spacing:-.07em}
+.jna-landscape-main h2 em{color:#ffc294;font-style:normal}
+.jna-landscape-main>div:first-child>b{display:inline-block;padding:7px 10px;border:1px solid #ffffff9c;font:700 11px "DM Sans"}
+.jna-landscape-seal{display:flex;flex-direction:column;align-items:center;justify-content:center;width:clamp(82px,12vw,125px);height:clamp(82px,12vw,125px);border:4px double #ffd4ad;border-radius:50%;color:#fff;font:800 27px Manrope;transform:rotate(8deg)}
+.jna-landscape-seal small{color:#ffcfaa;font:800 7px "DM Sans";letter-spacing:.14em}
+.jna-landscape-students{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.jna-landscape-students>div{display:flex;align-items:center;gap:9px;min-height:58px;padding:9px 12px;background:#ffffffed;color:#06483c}
+.jna-landscape-students i{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#eaf2ed;color:#e86a17;font:800 9px Manrope;font-style:normal}
+.jna-landscape-students b{font:800 8px "DM Sans"}
+.jna-landscape-students small{display:none}
+.jna-landscape-footer{display:flex;justify-content:space-between;gap:12px;margin-top:15px;color:#ffddc4;font:800 8px "DM Sans";letter-spacing:.12em}
+.jna-landscape-footer b{padding:4px 7px;border:1px solid #ffffff9c}
+.jna-results-demo-caption{margin:12px 0 0;text-align:center;color:#7a8980;font:500 10px/1.7 "DM Sans"}
+@media(max-width:700px){.jna-results-banner-inner{grid-template-columns:1fr;gap:18px;padding-top:35px;padding-bottom:30px}.jna-results-banner-art{height:170px}.jna-year-select{flex-direction:column;gap:10px}.jna-course-heading{padding:0 4px}.jna-results-poster-landscape{aspect-ratio:1.15;min-height:0}.jna-landscape-students>div{justify-content:center;padding:7px 4px}.jna-landscape-students b{font-size:7px}}
+@media(max-width:480px){.jna-archive-wrap{padding:35px 0 55px}.jna-archive-heading h2{font-size:34px}.jna-year-tabs button{width:85px}.jna-category-tabs{gap:7px}.jna-category-tabs button{min-width:calc(33.33% - 7px);padding:0 8px;font-size:10px}.jna-results-poster-landscape{aspect-ratio:.98;padding:18px;border-width:5px}.jna-landscape-brand>small{font-size:6px}.jna-landscape-main{margin:28px 0 22px}.jna-landscape-main h2{font-size:39px}.jna-landscape-seal{width:70px;height:70px;font-size:20px}.jna-landscape-students{gap:5px}.jna-landscape-students>div{min-height:46px}.jna-landscape-students i{width:23px;height:23px;flex-basis:23px;font-size:7px}.jna-landscape-students b{font-size:6px}.jna-landscape-footer{font-size:6px}}
