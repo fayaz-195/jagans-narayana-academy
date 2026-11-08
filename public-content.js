@@ -41,7 +41,22 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
       const h=document.querySelector("main h1");if(h&&page.title)h.textContent=page.title;
       const intro=document.querySelector(".hero-lead,.page-hero p,main>section p");if(intro&&page.intro)intro.textContent=page.intro;
       const main=document.querySelector("main");
-      if(main&&Array.isArray(page.sections)&&page.sections.length){
+      if(slug==="gallery"&&main&&Array.isArray(page.slides)&&page.slides.length){
+        const wall=main.querySelector(".jna-gallery-wall");
+        if(wall){
+          wall.replaceChildren();
+          page.slides.forEach((item,i)=>{
+            if(!item.image)return;
+            const card=document.createElement("figure");
+            card.className="jna-gallery-tile"+(i===0?" jna-gallery-tile-tall":"");
+            const img=document.createElement("img");img.src=item.image;img.alt=item.alt||item.caption||"Academy gallery";img.loading="lazy";card.append(img);
+            const cap=document.createElement("figcaption");const b=document.createElement("b");b.textContent=item.caption||"Academy moments";const small=document.createElement("small");small.textContent="JNA GALLERY";cap.append(b,small);card.append(cap);wall.append(card);
+          });
+          const filters=main.querySelector(".jna-gallery-filter");if(filters)filters.hidden=true;
+          const note=main.querySelector(".jna-campus-note");if(note)note.hidden=true;
+          const intro=main.querySelector(".jna-campus-intro p");if(intro)intro.textContent="A collection of photographs shared by Jagan Sir's Narayana Academy.";
+        }
+      }else if(main&&Array.isArray(page.sections)&&page.sections.length){
         const wrap=document.createElement("section");wrap.className="cms-page-sections";
         page.sections.forEach((item,i)=>{
           const card=document.createElement("article");card.className="cms-page-section"+(i%2?" reverse":"");
