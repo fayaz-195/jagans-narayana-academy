@@ -1478,3 +1478,52 @@ body{color:#17332d;background:#fff}
 .jna-competitive-related a{display:inline-flex;align-items:center;gap:12px;padding:11px 14px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
 @media(max-width:700px){.jna-competitive-hero-inner{grid-template-columns:1fr;gap:12px;min-height:0;padding-top:40px;padding-bottom:30px}.jna-competitive-art{min-height:215px}.jna-competitive-art-card{min-height:175px}.jna-competitive-art-ring{width:230px;height:230px}.jna-competitive-intro{grid-template-columns:1fr;gap:0}.jna-competitive-intro>p{margin-top:12px}.jna-competitive-cards{grid-template-columns:1fr}.jna-competitive-card{min-height:0}.jna-competitive-card>span{margin-bottom:17px}.jna-competitive-next{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){.jna-competitive-section{padding:52px 0 60px}.jna-competitive-actions a{font-size:10px}.jna-competitive-hero h1{font-size:44px}}
+
+/* Campus pages: Faculty, Facilities and Gallery */
+.jna-campus-page{background:#fff}
+.jna-campus-hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 45%,#0c6554 0,#075044 28%,#063f37 68%);color:#fff}
+.jna-campus-hero:before{content:"";position:absolute;right:-145px;top:-245px;width:600px;height:600px;border:1px solid #ffffff22;border-radius:50%;box-shadow:0 0 0 35px #ffffff08,0 0 0 78px #ffffff05}
+.jna-campus-hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;min-height:365px;padding-top:50px;padding-bottom:50px}
+.jna-campus-eyebrow{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-campus-hero h1{margin:17px 0 15px;color:#fff;font:800 clamp(42px,5.5vw,68px)/.98 Manrope;letter-spacing:-.07em}
+.jna-campus-hero h1 em{color:#f36b12;font-style:normal}
+.jna-campus-hero p{max-width:450px;margin:0;color:#d7e6df;font:400 14px/1.8 "DM Sans"}
+.jna-campus-hero-link{display:inline-flex;align-items:center;gap:20px;margin-top:24px;padding:12px 16px;border:1px solid #ffffff65;border-radius:4px;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+.jna-campus-hero-link span,.jna-campus-bottom a span{color:#ffc49b;font-size:16px}
+.jna-campus-hero-visual{position:relative;display:grid;place-items:center;min-height:250px}
+.jna-campus-monogram{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:235px;height:235px;border:1px solid #ffffff65;border-radius:50%;background:linear-gradient(145deg,#0b6655,#06463d);box-shadow:0 22px 55px #001e1840}
+.jna-campus-monogram small{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-campus-monogram strong{margin:5px 0;color:#fff;font:800 78px/.95 Manrope;letter-spacing:-.1em}
+.jna-campus-monogram span{color:#d7e6df;font:800 8px "DM Sans";letter-spacing:.17em}
+.jna-campus-hero-visual i{position:absolute;width:300px;height:300px;border:1px solid #f36b1277;border-radius:50%}
+.jna-campus-section{padding:70px 0 80px;background:linear-gradient(180deg,#f7f9f6,#fff 350px)}
+.jna-campus-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;margin-bottom:32px}
+.jna-campus-intro>div>span,.jna-campus-bottom>div>span{color:#e96b17;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-campus-intro h2{margin:9px 0 0;color:#103f34;font:800 clamp(28px,3.8vw,42px)/1.04 Manrope;letter-spacing:-.06em}
+.jna-campus-intro h2 em{color:#f36b12;font-style:normal}
+.jna-campus-intro>p{margin:18px 0 0;color:#66766d;font:400 13px/1.9 "DM Sans"}
+.jna-campus-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.jna-campus-card{position:relative;overflow:hidden;min-height:190px;padding:23px;border:1px solid #e0e9e2;border-radius:8px;background:#fff;box-shadow:0 8px 24px #123d260a}
+.jna-campus-card>span{display:grid;place-items:center;width:38px;height:38px;margin-bottom:24px;border-radius:6px;background:#063f37;color:#fff;font:800 10px Manrope}
+.jna-campus-card>small{color:#e96b17;font:800 8px "DM Sans";letter-spacing:.14em}
+.jna-campus-card h3{max-width:250px;margin:8px 0 0;color:#174538;font:700 14px/1.65 "DM Sans"}
+.jna-campus-card-line{position:absolute;right:-30px;bottom:-55px;width:120px;height:120px;border:1px solid #f36b1240;border-radius:50%;box-shadow:0 0 0 18px #f36b1208}
+.jna-campus-note{display:flex;align-items:center;gap:18px;margin-top:25px;padding:16px 20px;border-left:3px solid #f36b12;background:#f2f6f2}
+.jna-campus-note>b{flex:0 0 auto;color:#e96b17;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-campus-note p{margin:0;color:#65766d;font:500 11px/1.8 "DM Sans"}
+.jna-campus-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:42px;padding:25px 28px;border-radius:8px;background:#063f37;color:#fff}
+.jna-campus-bottom>div>span{color:#ffc49b}
+.jna-campus-bottom h2{margin:8px 0 0;color:#fff;font:800 23px Manrope}
+.jna-campus-bottom a{display:inline-flex;align-items:center;gap:18px;padding:12px 16px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+.jna-campus-bottom a span{color:#fff}
+.jna-campus-gallery{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.jna-gallery-tile{position:relative;overflow:hidden;margin:0;border-radius:8px;background:#063f37}
+.jna-gallery-large{grid-row:span 2}
+.jna-gallery-tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.jna-gallery-tile:hover img{transform:scale(1.045)}
+.jna-gallery-tile:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#001c18c9)}
+.jna-gallery-tile figcaption{position:absolute;z-index:1;left:19px;right:19px;bottom:17px;display:flex;flex-direction:column;gap:5px;color:#fff}
+.jna-gallery-tile figcaption b{font:800 16px Manrope}
+.jna-gallery-tile figcaption small{color:#ffd0ae;font:800 8px "DM Sans";letter-spacing:.12em}
+@media(max-width:700px){.jna-campus-hero-inner{grid-template-columns:1fr;gap:12px;min-height:0;padding-top:40px;padding-bottom:30px}.jna-campus-hero-visual{min-height:215px}.jna-campus-monogram{width:190px;height:190px}.jna-campus-monogram strong{font-size:65px}.jna-campus-hero-visual i{width:240px;height:240px}.jna-campus-intro{grid-template-columns:1fr;gap:0}.jna-campus-intro>p{margin-top:12px}.jna-campus-card-grid{grid-template-columns:1fr}.jna-campus-card{min-height:0}.jna-campus-card>span{margin-bottom:16px}.jna-campus-bottom{align-items:flex-start;flex-direction:column}.jna-campus-gallery{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}.jna-gallery-large{grid-row:auto;grid-column:span 2}}
+@media(max-width:480px){.jna-campus-section{padding:52px 0 60px}.jna-campus-gallery{grid-template-columns:1fr;grid-template-rows:190px 190px 190px}.jna-gallery-large{grid-column:auto}.jna-campus-note{align-items:flex-start;flex-direction:column;gap:7px}}
