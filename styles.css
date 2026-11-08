@@ -1437,3 +1437,44 @@ body{color:#17332d;background:#fff}
 .jna-stream-next a{background:#f36b12}
 .jna-stream-next a:hover{background:#d95708}
 @media(max-width:700px){.jna-stream-hero:after{right:-250px}.jna-stream-hero-inner{min-height:0}.jna-stream-art-card{min-height:170px}.jna-stream-art-orbit{width:220px;height:220px}.jna-stream-switch{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.jna-stream-switch a{min-width:0;padding:10px 5px;font-size:10px}.jna-stream-subject{min-height:0}.jna-stream-subject>span{margin-bottom:17px}}
+
+/* Competitive coaching pages — premium programme presentation */
+.jna-competitive-page{background:#fff}
+.jna-competitive-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 80% 45%,#0c6554 0,#075044 28%,#063f37 68%);color:#fff}
+.jna-competitive-hero:before{content:"";position:absolute;z-index:-1;right:-140px;top:-240px;width:600px;height:600px;border:1px solid #ffffff22;border-radius:50%;box-shadow:0 0 0 35px #ffffff08,0 0 0 78px #ffffff05}
+.jna-competitive-hero-inner{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:35px;min-height:390px;padding-top:50px;padding-bottom:50px}
+.jna-competitive-eyebrow{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-competitive-hero h1{margin:17px 0 15px;color:#fff;font:800 clamp(42px,5.5vw,68px)/.98 Manrope;letter-spacing:-.07em}
+.jna-competitive-hero h1 em{color:#f36b12;font-style:normal}
+.jna-competitive-hero p{max-width:440px;margin:0;color:#d7e6df;font:400 14px/1.8 "DM Sans"}
+.jna-competitive-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.jna-competitive-actions a{display:inline-flex;align-items:center;gap:18px;padding:12px 16px;border:1px solid #ffffff65;border-radius:4px;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+.jna-competitive-actions a:first-child{border-color:#f36b12;background:#f36b12}
+.jna-competitive-actions a span{font-size:15px}
+.jna-competitive-art{position:relative;display:grid;place-items:center;min-height:265px}
+.jna-competitive-art-card{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;width:min(100%,350px);min-height:225px;padding:25px;border:1px solid #ffffff45;border-radius:8px;background:linear-gradient(145deg,#fff,#f2f6f1);box-shadow:0 25px 55px #001e1840;color:#063f37}
+.jna-competitive-art-card>span{color:#e96b17;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-competitive-art-card strong{font:800 clamp(65px,8vw,92px)/.88 Manrope;letter-spacing:-.09em}
+.jna-competitive-art-card small{color:#4e6c60;font:800 9px "DM Sans";letter-spacing:.12em}
+.jna-competitive-art-ring{position:absolute;width:300px;height:300px;border:1px solid #f36b1277;border-radius:50%}
+.jna-competitive-section{padding:70px 0 80px;background:linear-gradient(180deg,#f7f9f6,#fff 340px)}
+.jna-competitive-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;margin-bottom:28px}
+.jna-competitive-intro>div>span,.jna-competitive-next>div>span{color:#e96b17;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-competitive-intro h2{margin:9px 0 0;color:#103f34;font:800 clamp(28px,3.8vw,42px)/1.04 Manrope;letter-spacing:-.06em}
+.jna-competitive-intro h2 em{color:#f36b12;font-style:normal}
+.jna-competitive-intro>p{margin:18px 0 0;color:#66766d;font:400 13px/1.9 "DM Sans"}
+.jna-competitive-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.jna-competitive-card{position:relative;overflow:hidden;min-height:190px;padding:23px;border:1px solid #e0e9e2;border-radius:8px;background:#fff;box-shadow:0 8px 24px #123d260a;transition:transform .2s,box-shadow .2s}
+.jna-competitive-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px #123d2617}
+.jna-competitive-card:after{content:"";position:absolute;right:-38px;bottom:-58px;width:140px;height:140px;border:1px solid #f36b1240;border-radius:50%;box-shadow:0 0 0 18px #f36b1208}
+.jna-competitive-card>span{display:grid;place-items:center;width:38px;height:38px;margin-bottom:26px;border-radius:6px;background:#063f37;color:#fff;font:800 10px Manrope}
+.jna-competitive-card h3{margin:0 0 9px;color:#174538;font:800 17px Manrope}
+.jna-competitive-card p{max-width:245px;margin:0;color:#75837b;font:400 11px/1.8 "DM Sans"}
+.jna-competitive-quote{margin:28px 0 0;padding:18px 22px;border-left:3px solid #f36b12;background:#f2f6f2;color:#174538;font:700 14px Manrope}
+.jna-competitive-next{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:32px;padding:25px 28px;border-radius:8px;background:#063f37;color:#fff}
+.jna-competitive-next h2{margin:7px 0 0;color:#fff;font:800 22px Manrope}
+.jna-competitive-next p{margin:6px 0 0;color:#d3e3dc;font:400 11px "DM Sans"}
+.jna-competitive-related{display:flex;gap:8px;flex-wrap:wrap}
+.jna-competitive-related a{display:inline-flex;align-items:center;gap:12px;padding:11px 14px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+@media(max-width:700px){.jna-competitive-hero-inner{grid-template-columns:1fr;gap:12px;min-height:0;padding-top:40px;padding-bottom:30px}.jna-competitive-art{min-height:215px}.jna-competitive-art-card{min-height:175px}.jna-competitive-art-ring{width:230px;height:230px}.jna-competitive-intro{grid-template-columns:1fr;gap:0}.jna-competitive-intro>p{margin-top:12px}.jna-competitive-cards{grid-template-columns:1fr}.jna-competitive-card{min-height:0}.jna-competitive-card>span{margin-bottom:17px}.jna-competitive-next{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.jna-competitive-section{padding:52px 0 60px}.jna-competitive-actions a{font-size:10px}.jna-competitive-hero h1{font-size:44px}}
