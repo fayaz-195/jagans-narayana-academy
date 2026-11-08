@@ -1527,3 +1527,18 @@ body{color:#17332d;background:#fff}
 .jna-gallery-tile figcaption small{color:#ffd0ae;font:800 8px "DM Sans";letter-spacing:.12em}
 @media(max-width:700px){.jna-campus-hero-inner{grid-template-columns:1fr;gap:12px;min-height:0;padding-top:40px;padding-bottom:30px}.jna-campus-hero-visual{min-height:215px}.jna-campus-monogram{width:190px;height:190px}.jna-campus-monogram strong{font-size:65px}.jna-campus-hero-visual i{width:240px;height:240px}.jna-campus-intro{grid-template-columns:1fr;gap:0}.jna-campus-intro>p{margin-top:12px}.jna-campus-card-grid{grid-template-columns:1fr}.jna-campus-card{min-height:0}.jna-campus-card>span{margin-bottom:16px}.jna-campus-bottom{align-items:flex-start;flex-direction:column}.jna-campus-gallery{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}.jna-gallery-large{grid-row:auto;grid-column:span 2}}
 @media(max-width:480px){.jna-campus-section{padding:52px 0 60px}.jna-campus-gallery{grid-template-columns:1fr;grid-template-rows:190px 190px 190px}.jna-gallery-large{grid-column:auto}.jna-campus-note{align-items:flex-start;flex-direction:column;gap:7px}}
+
+/* Faculty portrait showcase */
+.jna-faculty-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.jna-faculty-card{overflow:hidden;border:1px solid #e0e9e2;border-radius:8px;background:#fff;box-shadow:0 10px 28px #123d2610;transition:transform .2s,box-shadow .2s}
+.jna-faculty-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px #123d261b}
+.jna-faculty-photo{position:relative;height:270px;overflow:hidden;background:#e8eee9}
+.jna-faculty-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform .4s}
+.jna-faculty-card:hover .jna-faculty-photo img{transform:scale(1.04)}
+.jna-faculty-photo>span{position:absolute;left:12px;top:12px;padding:6px 9px;border-radius:3px;background:#063f37e8;color:#fff;font:800 8px "DM Sans";letter-spacing:.12em}
+.jna-faculty-info{padding:18px 19px 20px}
+.jna-faculty-info>small{color:#e96b17;font:800 8px "DM Sans";letter-spacing:.15em}
+.jna-faculty-info h3{margin:8px 0 5px;color:#174538;font:800 17px Manrope}
+.jna-faculty-info p{margin:0;color:#75837b;font:400 11px/1.7 "DM Sans"}
+@media(max-width:700px){.jna-faculty-grid{grid-template-columns:1fr 1fr}.jna-faculty-photo{height:220px}}
+@media(max-width:480px){.jna-faculty-grid{grid-template-columns:1fr}.jna-faculty-photo{height:280px}}
