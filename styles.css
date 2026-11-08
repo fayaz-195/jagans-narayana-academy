@@ -585,3 +585,52 @@ body{color:#17332d;background:#fff}
  .jna-programme-grid .programme-card{min-height:174px;padding:16px 13px}
  .jna-programme-grid .programme-card h3{font-size:16px}
 }
+
+
+/* Match the approved homepage concept: overlapping strengths + dark programme showcase */
+.jna-hero{min-height:560px;grid-template-columns:46% 54%;background:#f8f7f2}
+.jna-hero-copy{padding-top:72px;padding-bottom:105px}
+.jna-hero-image{min-height:560px}
+.jna-strengths{margin:-58px auto 0;min-height:104px;border-radius:16px;box-shadow:0 10px 34px #001f1830;padding:18px 22px}
+.programmes-section{position:relative;background:#004b3d!important;color:#fff;padding:48px 0 52px;margin-top:0}
+.programmes-section .section-heading{align-items:end;margin-bottom:28px}
+.programmes-section .section-label{color:#f8b17e}
+.programmes-section .section-heading h2{color:#fff}
+.programmes-section .section-heading h2 em{color:#f6a16a}
+.programmes-section .section-heading>p{color:#d0e2da}
+.jna-programme-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.jna-programme-grid .programme-card{min-height:188px;border:0;border-radius:14px;padding:20px 17px;background:#f4f8e9;color:#102d24;box-shadow:none;transition:transform .2s ease,box-shadow .2s ease}
+.jna-programme-grid .programme-card:nth-child(2){background:#fff0df}
+.jna-programme-grid .programme-card:nth-child(3){background:#e5f2fa}
+.jna-programme-grid .programme-card:nth-child(4){background:#fde9ed}
+.jna-programme-grid .programme-card:nth-child(5){background:#fff4dc}
+.jna-programme-grid .programme-card:nth-child(6){background:#f0eafa}
+.jna-programme-grid .programme-card:hover{transform:translateY(-5px);box-shadow:0 12px 24px #001c1430}
+.jna-programme-grid .programme-icon{font-size:31px;line-height:1;color:#5b9d25;margin:0 0 17px}
+.jna-programme-grid .programme-card:nth-child(2) .programme-icon{color:#f58220}
+.jna-programme-grid .programme-card:nth-child(3) .programme-icon{color:#258ac2}
+.jna-programme-grid .programme-card:nth-child(4) .programme-icon{color:#cf4267}
+.jna-programme-grid .programme-card:nth-child(5) .programme-icon{color:#ed9d24}
+.jna-programme-grid .programme-card:nth-child(6) .programme-icon{color:#8253c9}
+.jna-programme-grid .programme-card h3{font-size:18px;color:#15251f}
+.jna-programme-grid .programme-card p{color:#53615b;font-size:11px;min-height:28px}
+.jna-programme-grid .card-link{color:#005343;font-weight:800}
+.visual-pathways{padding:76px 0 82px;background:#f5f7f3}
+@media(max-width:1050px){
+ .jna-hero{min-height:480px}
+ .jna-hero-image{min-height:480px}
+ .jna-strengths{margin-top:-38px}
+ .jna-programme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:680px){
+ .jna-hero{min-height:0}
+ .jna-hero-copy{padding:42px 22px 30px}
+ .jna-hero-image{min-height:280px}
+ .jna-strengths{margin:14px auto 0}
+ .programmes-section{padding:42px 0}
+ .programmes-section .section-heading{display:block}
+ .programmes-section .section-heading>p{margin-top:14px}
+ .jna-programme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .jna-programme-grid .programme-card{min-height:168px}
+ .visual-pathways{padding:58px 0}
+}
