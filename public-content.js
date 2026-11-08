@@ -69,8 +69,9 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
   }catch(e){console.warn("Academy content could not be refreshed",e)}
 })();
 
-/* Front-end visual editor: only authenticated JNA admins see this toolbar. */
+/* Front-end visual editor: only shown on the explicit admin-mode URL. */
 (async()=>{
+ if(new URLSearchParams(location.search).get("jna_admin")!=="1")return;
  try{
   const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
   const sb=createClient(CMS_URL,CMS_KEY);
