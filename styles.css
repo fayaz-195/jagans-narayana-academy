@@ -792,3 +792,89 @@ body{color:#17332d;background:#fff}
 @media(max-width:680px){
  .jna-slider-controls{bottom:14px;z-index:8}
 }
+
+
+/* About Academy page — original JNA green and orange editorial layout */
+.jna-about-page{overflow:hidden}
+.jna-about-hero{background:#f7f7f2;padding:50px 0 58px}
+.jna-about-hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+.jna-about-intro{padding:12px 0 22px}
+.jna-about-page .breadcrumb{margin-bottom:34px;color:#7b8982;font:800 10px "DM Sans";letter-spacing:.14em}
+.jna-about-page .breadcrumb a{color:#00604d;text-decoration:none}
+.jna-about-page .breadcrumb span{color:#f36b12;padding:0 8px}
+.jna-about-kicker{display:block;color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.18em;margin-bottom:16px}
+.jna-about-intro h1{margin:0 0 22px;color:#06483c;font:800 clamp(46px,5.3vw,76px)/.99 Manrope;letter-spacing:-.07em}
+.jna-about-intro h1 em,.jna-about-section-head h2 em,.jna-about-statement h2 em,.jna-about-cta h2 em{font-style:normal;color:#f36b12}
+.jna-about-intro>p{max-width:510px;color:#64736c;font:400 16px/1.8 "DM Sans";margin:0 0 28px}
+.jna-about-actions{display:flex;align-items:center;gap:23px;flex-wrap:wrap}
+.jna-about-btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:0 22px;background:#005343;color:#fff;border-radius:6px;text-decoration:none;font:800 12px "DM Sans"}
+.jna-about-btn:hover{background:#f36b12}
+.jna-about-textlink{color:#17483b;text-decoration:none;font:800 12px "DM Sans"}
+.jna-about-visual{position:relative;min-height:450px}
+.jna-about-visual:before{content:"";position:absolute;left:-14px;top:18px;bottom:-14px;width:14px;background:#f36b12}
+.jna-about-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(.85)}
+.jna-about-image-note{position:absolute;left:0;bottom:0;display:flex;flex-direction:column;gap:9px;padding:21px 25px;background:#06483c;color:#fff;min-width:245px}
+.jna-about-image-note span{color:#ffad78;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-about-image-note b{font:800 19px/1.25 Manrope}
+.jna-about-vertical{position:absolute;right:-33px;top:28px;writing-mode:vertical-rl;color:#fff;font:800 9px "DM Sans";letter-spacing:.18em}
+.jna-about-statement{padding:86px 0;background:#fff}
+.jna-about-statement-grid{display:grid;grid-template-columns:.55fr 1fr;gap:60px}
+.jna-about-overline{color:#ed6b17;font:800 10px "DM Sans";letter-spacing:.16em}
+.jna-about-statement h2,.jna-about-section-head h2,.jna-about-cta h2{margin:0 0 18px;color:#06483c;font:800 clamp(35px,4.3vw,55px)/1.04 Manrope;letter-spacing:-.06em}
+.jna-about-statement p{max-width:740px;color:#65736d;font:400 15px/1.9 "DM Sans";margin:0}
+.jna-about-approach{padding:82px 0;background:#06483c;color:#fff}
+.jna-about-section-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:36px}
+.jna-about-section-head h2{color:#fff}
+.jna-about-section-head>p{max-width:440px;color:#d1e1da;font:400 14px/1.8 "DM Sans";margin:0 0 5px}
+.jna-about-pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff30;border:1px solid #ffffff30}
+.jna-about-pillars article{position:relative;min-height:240px;padding:26px 23px;background:#075345}
+.jna-about-pillars article>span{position:absolute;right:22px;top:20px;color:#9cbab0;font:800 10px "DM Sans";letter-spacing:.14em}
+.jna-about-pillar-icon{display:grid;place-items:center;width:45px;height:45px;margin:10px 0 22px;border-radius:50%;background:#ffffff18;color:#ff9a5d;font-size:23px}
+.jna-about-pillars h3{margin:0 0 10px;color:#fff;font:800 19px Manrope}
+.jna-about-pillars p{margin:0;color:#c6d9d1;font:400 12px/1.7 "DM Sans"}
+.jna-about-pathways{padding:84px 0;background:#f5f7f3}
+.jna-about-pathways .jna-about-section-head h2{color:#06483c}
+.jna-about-pathways .jna-about-section-head>p{color:#66756e}
+.jna-about-path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.jna-about-path-grid a{position:relative;display:flex;flex-direction:column;gap:12px;min-height:185px;padding:23px 20px;background:#fff;border:1px solid #e0e8e2;border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.jna-about-path-grid a:hover{transform:translateY(-4px);box-shadow:0 12px 25px #063f3715}
+.jna-about-path-grid a span{color:#ed6b17;font:800 9px "DM Sans";letter-spacing:.13em}
+.jna-about-path-grid a b{color:#123e33;font:800 18px Manrope}
+.jna-about-path-grid a small{color:#6b7972;font:500 11px "DM Sans"}
+.jna-about-path-grid a i{position:absolute;right:18px;bottom:17px;color:#00604d;font-style:normal}
+.jna-about-cta{padding:74px 0;background:#fff}
+.jna-about-cta-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;padding:42px 48px;background:#fff0e4;border-left:6px solid #f36b12}
+.jna-about-cta h2{margin-bottom:12px}
+.jna-about-cta p{margin:0;color:#65736d;font:400 13px/1.7 "DM Sans"}
+.jna-about-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px;flex-shrink:0}
+.jna-about-call{color:#06483c;text-decoration:none;font:800 13px "DM Sans"}
+@media(max-width:900px){
+ .jna-about-hero-grid{grid-template-columns:1fr 1fr;gap:30px}
+ .jna-about-visual{min-height:380px}
+ .jna-about-pillars{grid-template-columns:repeat(2,1fr)}
+ .jna-about-path-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+ .jna-about-hero{padding:30px 0 42px}
+ .jna-about-hero-grid{grid-template-columns:1fr;gap:28px}
+ .jna-about-page .breadcrumb{margin-bottom:25px}
+ .jna-about-intro h1{font-size:clamp(43px,12vw,60px)}
+ .jna-about-intro>p{font-size:14px}
+ .jna-about-visual{min-height:290px;margin-left:12px;margin-right:10px}
+ .jna-about-vertical{right:-22px}
+ .jna-about-statement,.jna-about-pathways,.jna-about-cta{padding:58px 0}
+ .jna-about-statement-grid{grid-template-columns:1fr;gap:18px}
+ .jna-about-section-head{display:block;margin-bottom:26px}
+ .jna-about-section-head>p{margin-top:14px}
+ .jna-about-approach{padding:58px 0}
+ .jna-about-pillars{grid-template-columns:1fr 1fr}
+ .jna-about-pillars article{min-height:210px;padding:20px 16px}
+ .jna-about-path-grid{grid-template-columns:1fr 1fr;gap:9px}
+ .jna-about-path-grid a{min-height:160px;padding:18px 14px}
+ .jna-about-path-grid a b{font-size:15px}
+ .jna-about-cta-inner{display:block;padding:27px 23px}
+ .jna-about-cta-actions{margin-top:22px}
+}
+@media(max-width:390px){
+ .jna-about-pillars,.jna-about-path-grid{grid-template-columns:1fr}
+}
