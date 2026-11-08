@@ -1122,3 +1122,44 @@ body{color:#17332d;background:#fff}
 .jna-results-upload-note b{color:#06483c}
 @media(max-width:850px){.jna-results-gallery-head{display:block}.jna-results-gallery-head>p{margin-top:14px}.jna-results-photo-grid{grid-template-columns:1fr 1fr}.jna-result-photo-large{grid-row:auto;grid-column:span 2}.jna-result-photo-large .jna-result-photo-frame{min-height:280px}}
 @media(max-width:650px){.jna-results-gallery{padding:58px 0}.jna-results-photo-grid{gap:13px}.jna-result-photo-frame{min-height:150px}.jna-result-photo figcaption{display:block}.jna-result-photo figcaption span{display:block;margin-top:4px;font-size:8px}.jna-results-upload-note{display:block}.jna-results-upload-note p{margin-top:10px}}
+
+/* Results archive — year/category selector inspired by reference layout */
+.jna-results-archive{background:#fff;min-height:700px}
+.jna-archive-wrap{padding:46px 0 90px}
+.jna-archive-heading{text-align:center;margin:0 auto 28px}
+.jna-archive-heading>span{color:#ed6b17;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-archive-heading h1{margin:8px 0 7px;color:#101b18;font:800 38px/1.1 Manrope;letter-spacing:-.04em}
+.jna-archive-heading p{margin:0;color:#6c7771;font:400 13px/1.7 "DM Sans"}
+.jna-year-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 auto 25px;max-width:1100px}
+.jna-year-tabs button{height:56px;border:1px solid #e1e5e2;border-radius:6px;background:#f1f2f2;color:#18211e;font:700 15px "DM Sans";cursor:pointer;transition:.2s}
+.jna-year-tabs button.is-active{background:#06483c;border-color:#06483c;color:#fff;box-shadow:0 5px 16px #06483c22}
+.jna-category-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 30px}
+.jna-category-tabs button{min-width:150px;height:44px;padding:0 22px;border:1px solid #f0a58a;border-radius:30px;background:#fff;color:#202b26;font:700 13px "DM Sans";cursor:pointer;box-shadow:0 2px 7px #152c2010;transition:.2s}
+.jna-category-tabs button.is-active{background:#f36b12;border-color:#f36b12;color:#fff;box-shadow:0 5px 14px #f36b1230}
+.jna-archive-result-area{display:grid;grid-template-columns:minmax(280px,420px) minmax(250px,420px);justify-content:center;align-items:center;gap:60px;max-width:1000px;margin:0 auto;padding:8px 0}
+.jna-result-poster{position:relative;min-height:520px;padding:24px 25px 20px;overflow:hidden;text-align:center;color:#fff;background:linear-gradient(155deg,#063f37 0%,#087362 57%,#f36b12 57.2%,#e85e0b 100%);border:7px solid #fff;outline:1px solid #d8e1db;border-radius:9px;box-shadow:0 16px 42px #102d2022}
+.jna-result-poster:before{content:"";position:absolute;inset:12px;border:1px solid #ffffff55;pointer-events:none}
+.jna-poster-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;text-align:left;font:700 10px/1.4 "DM Sans";letter-spacing:.07em}
+.jna-poster-mark{display:grid;place-items:center;width:43px;height:43px;border-radius:7px;background:#fff;color:#06483c;font:800 15px Manrope}
+.jna-poster-top b{font-size:11px;color:#ffd1ad}
+.jna-poster-ribbon{position:relative;z-index:1;display:inline-block;margin:28px auto 10px;padding:7px 15px;background:#fff;color:#06483c;font:800 9px "DM Sans";letter-spacing:.16em}
+.jna-poster-title{position:relative;z-index:1;font:800 50px/.95 Manrope;letter-spacing:-.06em}
+.jna-poster-title strong{display:block;margin-top:8px;color:#ffd1ad;font-size:65px}
+.jna-poster-category{position:relative;z-index:1;display:inline-block;margin-top:12px;padding:7px 25px;border:1px solid #ffffff9c;border-radius:30px;color:#fff;font:800 15px "DM Sans";letter-spacing:.12em}
+.jna-poster-art{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;gap:22px;margin:25px 0 18px}
+.jna-poster-medal{display:flex;flex-direction:column;justify-content:center;width:112px;height:112px;border:5px double #f8c99d;border-radius:50%;background:#fff;color:#06483c;font:800 26px Manrope;box-shadow:0 0 0 8px #ffffff20}
+.jna-poster-medal span{margin-top:3px;color:#e66a19;font:800 7px "DM Sans";letter-spacing:.15em}
+.jna-poster-laurel{color:#ffd1ad;font-size:35px}
+.jna-poster-placeholder{position:relative;z-index:1;max-width:280px;margin:0 auto;padding:13px 12px;border:1px dashed #ffffffb0;background:#ffffff15}
+.jna-poster-placeholder b{display:block;font:800 10px "DM Sans";letter-spacing:.1em}
+.jna-poster-placeholder span{display:block;margin-top:6px;color:#fff2e7;font:500 9px/1.6 "DM Sans"}
+.jna-poster-bottom{position:relative;z-index:1;margin-top:20px;color:#fff;font:800 8px "DM Sans";letter-spacing:.2em}
+.jna-archive-side-note .jna-results-kicker{margin-bottom:12px}
+.jna-archive-side-note h2{margin:0 0 15px;color:#06483c;font:800 clamp(34px,4vw,48px)/1.04 Manrope;letter-spacing:-.06em}
+.jna-archive-side-note h2 em{color:#f36b12;font-style:normal}
+.jna-archive-side-note p{margin:0;color:#64736b;font:400 14px/1.9 "DM Sans"}
+.jna-archive-key{display:flex;flex-direction:column;gap:5px;margin-top:25px;padding:16px 18px;border-left:3px solid #f36b12;background:#f5f7f3}
+.jna-archive-key b{color:#06483c;font:800 13px Manrope}
+.jna-archive-key small{color:#77847c;font:600 10px "DM Sans"}
+@media(max-width:760px){.jna-archive-wrap{padding:35px 0 60px}.jna-archive-result-area{grid-template-columns:1fr;gap:30px;max-width:460px}.jna-result-poster{min-height:490px}.jna-archive-side-note{text-align:center}.jna-archive-key{text-align:left}}
+@media(max-width:480px){.jna-archive-heading h1{font-size:32px}.jna-year-tabs{gap:6px}.jna-year-tabs button{height:48px}.jna-category-tabs{gap:8px}.jna-category-tabs button{min-width:calc(33.33% - 8px);padding:0 12px}.jna-result-poster{min-height:460px;padding:22px 15px}.jna-poster-title{font-size:43px}.jna-poster-title strong{font-size:57px}}
