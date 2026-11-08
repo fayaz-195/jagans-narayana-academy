@@ -96,16 +96,33 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
     if(v.kind==="text"){const el=nodes.find(n=>n.dataset.jnaEditId===id);if(el)el.textContent=v.value}
     if(v.kind==="image"){const el=imgs.find(n=>n.dataset.jnaImageId===id);if(el)el.src=v.value}
   });
+  const sections=[...document.querySelectorAll("main > section, main section.section, main .visual-pathways, main .quick-strip")].filter(el=>!el.closest("#jna-visual-toolbar"));
+  sections.forEach((section,i)=>{
+    section.dataset.jnaSectionId=String(i);
+    const controls=document.createElement("div");controls.className="jna-section-controls";
+    controls.innerHTML='<button type="button" data-section-edit="'+i+'">Edit section</button>';
+    section.prepend(controls);
+  });
+  const sectionStyle=document.createElement("style");
+  sectionStyle.textContent='.jna-section-controls{display:none;position:absolute;z-index:30;top:12px;right:12px}.jna-editing .jna-section-controls{display:block}.jna-section-controls button{border:0;border-radius:7px;padding:9px 12px;background:#f36b12;color:#fff;font:700 12px "DM Sans",sans-serif;box-shadow:0 3px 12px #0002}.jna-editing main>section,.jna-editing main section.section,.jna-editing main .visual-pathways,.jna-editing main .quick-strip{position:relative}.jna-section-active{outline:2px dashed #008b7b;outline-offset:-5px}';
+  document.head.append(sectionStyle);
   const setEdit=on=>{
     editing=on;document.body.classList.toggle("jna-editing",on);
     nodes.forEach(el=>{el.contentEditable=on?"true":"false";el.spellcheck=on});
-    status.textContent=on?"Tap text to edit. Tap an outlined image to replace its URL.":"View mode";
+    status.textContent=on?"Choose Edit section, then click text or an image to change it.":"View mode";
     bar.querySelector('[data-action="edit"]').textContent=on?"Editing…":"Edit Page";
   };
+  bar.addEventListener("click",e=>{
+    const id=e.target.dataset.sectionEdit;if(id===undefined)return;
+    const section=sections.find(s=>s.dataset.jnaSectionId===id);if(!section)return;
+    section.classList.toggle("jna-section-active");
+    section.querySelectorAll("[data-jna-editable=true]").forEach(el=>{el.contentEditable=section.classList.contains("jna-section-active")?"true":"false"});
+    status.textContent=section.classList.contains("jna-section-active")?"This section is editable. Make changes, then Save Draft or Publish.":"Section editing closed.";
+  });
   bar.addEventListener("click",async e=>{
     const action=e.target.dataset.action;if(!action)return;
     if(action==="edit"){setEdit(!editing);return}
-    if(action==="exit"){setEdit(false);bar.remove();style.remove();document.body.style.paddingBottom="";return}
+    if(action==="exit"){setEdit(false);bar.remove();style.remove();sectionStyle.remove();document.body.style.paddingBottom="";return}
     if(action==="save"||action==="publish"){
       const payload=[];
       nodes.forEach(el=>{if(el.dataset.jnaOriginalText!==el.textContent){payload.push({content_key:"visual:"+slug+":"+el.dataset.jnaEditId,content_value:{kind:"text",value:el.textContent,deleted:false},updated_by:session.user.id})}});
