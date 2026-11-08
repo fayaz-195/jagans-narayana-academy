@@ -1650,3 +1650,68 @@ body{color:#17332d;background:#fff}
 .jna-footer-bottom>div>div{display:flex;gap:22px}
 @media(max-width:900px){.jna-footer-enquiry-inner{grid-template-columns:1fr}.jna-footer-main{grid-template-columns:repeat(2,1fr);gap:32px}}
 @media(max-width:560px){.jna-footer-enquiry-inner{padding:25px 0}.jna-footer-form{grid-template-columns:1fr 1fr}.jna-footer-form button{grid-column:span 2}.jna-footer-main{grid-template-columns:1fr;gap:28px;padding-top:35px;padding-bottom:35px}.jna-footer-bottom>.container{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.jna-footer-bottom>div>div{flex-wrap:wrap;gap:14px}}
+
+/* Contact page enquiry experience */
+.jna-contact-hero{background:linear-gradient(110deg,#eff6f1 0%,#fff 75%);padding:76px 0 70px}
+.jna-contact-hero h1{max-width:780px;color:#063f37;font:800 clamp(46px,6vw,76px)/.99 Manrope;letter-spacing:-.065em}
+.jna-contact-hero h1 em,.jna-contact-section-head h2 em,.jna-contact-form-intro h2 em,.jna-contact-visit h2 em{color:#f36b12;font-style:normal}
+.jna-contact-hero p{max-width:540px}
+.jna-contact-hero-actions{display:flex;align-items:center;gap:22px;margin-top:25px}
+.jna-contact-textlink{color:#0a5146;font:700 12px "DM Sans";text-decoration:none}
+.jna-contact-quick{border-bottom:1px solid #e4ece6;background:#fff}
+.jna-contact-quick-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.jna-contact-quick-grid>a{display:flex;flex-direction:column;gap:7px;padding:24px 25px;border-right:1px solid #e7eee8;text-decoration:none}
+.jna-contact-quick-grid>a:first-child{border-left:1px solid #e7eee8}
+.jna-contact-quick-grid span,.jna-contact-course-grid span{color:#e96b17;font:800 8px "DM Sans";letter-spacing:.16em}
+.jna-contact-quick-grid b{color:#174538;font:800 17px Manrope}
+.jna-contact-quick-grid small{color:#829087;font:500 10px "DM Sans"}
+.jna-contact-main-section{padding:86px 0;background:#f5f8f5}
+.jna-contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.jna-contact-form-intro{position:sticky;top:30px}
+.jna-contact-form-intro h2,.jna-contact-section-head h2,.jna-contact-visit h2{margin:14px 0 16px;color:#063f37;font:800 clamp(34px,4vw,48px)/1.08 Manrope;letter-spacing:-.055em}
+.jna-contact-form-intro>p,.jna-contact-visit p{max-width:390px;color:#718078;font:400 13px/1.9 "DM Sans"}
+.jna-contact-side-note{display:flex;flex-direction:column;gap:8px;margin-top:34px;padding:20px;border-left:3px solid #f36b12;background:#fff}
+.jna-contact-side-note b{color:#174538;font:800 13px Manrope}
+.jna-contact-side-note span{color:#77877d;font:400 11px/1.8 "DM Sans"}
+.jna-contact-trust{display:flex;flex-direction:column;gap:10px;margin-top:28px;color:#819087;font:800 8px "DM Sans";letter-spacing:.13em}
+.jna-contact-form{padding:30px;background:#fff;border:1px solid #e2eae3;border-radius:8px;box-shadow:0 20px 55px #123d260b}
+.jna-form-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid #e9efea}
+.jna-form-heading span{color:#0a5146;font:800 12px "DM Sans";letter-spacing:.13em}
+.jna-form-heading small{color:#9aa59e;font:400 10px "DM Sans"}
+.jna-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.jna-form-grid label{display:flex;flex-direction:column;gap:8px;color:#284c40;font:700 11px "DM Sans"}
+.jna-form-grid input,.jna-form-grid select,.jna-form-grid textarea{width:100%;min-width:0;border:1px solid #dce6de;border-radius:4px;background:#fff;padding:13px 12px;color:#23483c;font:400 12px "DM Sans";outline:none}
+.jna-form-grid input:focus,.jna-form-grid select:focus,.jna-form-grid textarea:focus{border-color:#0a806d;box-shadow:0 0 0 3px #0a806d15}
+.jna-form-grid textarea{resize:vertical;min-height:100px}
+.jna-form-wide{grid-column:1/-1}
+.jna-form-consent{display:flex;align-items:flex-start;gap:10px;margin:20px 0;color:#77877d;font:400 10px/1.7 "DM Sans"}
+.jna-form-consent input{margin-top:2px;accent-color:#0a5146}
+.jna-contact-submit{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 18px;border:0;border-radius:4px;background:#f36b12;color:#fff;cursor:pointer;font:800 12px "DM Sans"}
+.jna-contact-submit:hover{background:#df5e0b}
+.jna-form-privacy{margin:12px 0 0;color:#99a49d;font:400 9px/1.7 "DM Sans"}
+.jna-contact-pathways{padding:82px 0}
+.jna-contact-section-head{margin-bottom:30px}
+.jna-contact-course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.jna-contact-course-grid a{display:flex;flex-direction:column;gap:10px;min-height:145px;padding:22px;border:1px solid #e1eae2;border-radius:5px;text-decoration:none;transition:transform .2s,border-color .2s}
+.jna-contact-course-grid a:hover{transform:translateY(-3px);border-color:#f36b12}
+.jna-contact-course-grid b{color:#174538;font:800 21px Manrope}
+.jna-contact-course-grid small{color:#77877d;font:500 10px "DM Sans"}
+.jna-contact-visit{padding:75px 0;background:#063f37;color:#fff}
+.jna-contact-visit-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+.jna-contact-visit .section-label{color:#f5a15f}
+.jna-contact-visit h2{color:#fff}
+.jna-contact-visit p{color:#d0dfd7}
+.jna-contact-visit .btn{display:inline-flex;margin-top:14px}
+.jna-contact-hours-note{max-width:360px;margin-top:25px;color:#c2d4cb;font:400 10px/1.8 "DM Sans"}
+.jna-contact-map{height:370px;overflow:hidden;border:5px solid #ffffff20;border-radius:7px;background:#e7eee8}
+.jna-contact-map iframe{width:100%;height:100%;border:0}
+.jna-contact-faq{padding:80px 0;background:#f5f8f5}
+.jna-contact-faq-list{max-width:900px;border-top:1px solid #dfe8e1}
+.jna-contact-faq-list details{padding:20px 5px;border-bottom:1px solid #dfe8e1}
+.jna-contact-faq-list summary{position:relative;cursor:pointer;list-style:none;padding-right:30px;color:#174538;font:800 14px Manrope}
+.jna-contact-faq-list summary::-webkit-details-marker{display:none}
+.jna-contact-faq-list summary:after{content:"+";position:absolute;right:5px;top:-4px;color:#f36b12;font:400 23px Manrope}
+.jna-contact-faq-list details[open] summary:after{content:"−"}
+.jna-contact-faq-list details p{max-width:760px;margin:13px 0 0;color:#748279;font:400 12px/1.8 "DM Sans"}
+@media(max-width:850px){.jna-contact-layout,.jna-contact-visit-grid{grid-template-columns:1fr;gap:35px}.jna-contact-form-intro{position:static}.jna-contact-course-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.jna-contact-hero{padding:52px 0}.jna-contact-quick-grid{grid-template-columns:1fr}.jna-contact-quick-grid>a,.jna-contact-quick-grid>a:first-child{border:0;border-bottom:1px solid #e7eee8;padding:17px 5px}.jna-contact-main-section,.jna-contact-pathways,.jna-contact-faq{padding:55px 0}.jna-contact-form{padding:20px 15px}.jna-form-grid{grid-template-columns:1fr}.jna-form-wide{grid-column:auto}.jna-form-heading{align-items:flex-start;flex-direction:column}.jna-contact-course-grid{grid-template-columns:1fr 1fr}.jna-contact-course-grid a{min-height:125px;padding:16px}.jna-contact-course-grid b{font-size:17px}.jna-contact-map{height:300px}.jna-contact-hero-actions{align-items:flex-start;flex-direction:column;gap:15px}}
