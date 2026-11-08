@@ -80,6 +80,16 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
   const {data:admins,error:adminErr}=await sb.from("jna_admin_users").select("user_id").eq("user_id",session.user.id).limit(1);
   if(adminErr||!admins?.length)return;
   const slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/,"")||"index";
+  // Keep admin mode while navigating between all academy pages.
+  document.querySelectorAll('a[href]').forEach(a=>{
+    try{
+      const u=new URL(a.getAttribute("href"),location.href);
+      if(u.origin===location.origin && !u.hash && !/^(mailto:|tel:)/i.test(a.getAttribute("href"))){
+        u.searchParams.set("jna_admin","1");
+        a.href=u.pathname+u.search+u.hash;
+      }
+    }catch(_){}
+  });
   const bar=document.createElement("div");bar.id="jna-visual-toolbar";
   bar.innerHTML='<strong>JNA VISUAL EDITOR</strong><span class="jna-editor-page"></span><button type="button" data-action="edit">Edit Page</button><button type="button" data-action="save">Save Draft</button><button type="button" data-action="publish">Publish</button><button type="button" data-action="exit">Exit</button><span class="jna-editor-status" role="status"></span>';
   document.body.append(bar);
@@ -89,7 +99,7 @@ const CMS_KEY="sb_publishable_T9S1AjS5mk5GhqnPeuet7w_HJ5LYJUh";
   const status=bar.querySelector(".jna-editor-status");
   let editing=false,dirty=false;
   const selectorPath=el=>{const parts=[];while(el&&el!==document.body){let n=1,s=el;while((s=s.previousElementSibling))if(s.tagName===el.tagName)n++;parts.unshift(el.tagName.toLowerCase()+":nth-of-type("+n+")");el=el.parentElement}return "body > "+parts.join(" > ")};
-  const nodes=[...document.querySelectorAll("main h1,main h2,main h3,main p,main li,main a,main button,header .brand-copy strong,header .brand-copy small,footer p,footer a")].filter(el=>!el.closest("#jna-visual-toolbar"));
+  const nodes=[...document.querySelectorAll("main h1,main h2,main h3,main h4,main p,main li,main a,main button,main strong,main span,main em,main small,main figcaption,main label,main input,main textarea,main select,header .brand-copy strong,header .brand-copy small,footer p,footer a,footer strong,footer span")].filter(el=>!el.closest("#jna-visual-toolbar"));
   nodes.forEach((el,i)=>{el.dataset.jnaEditId=String(i);el.dataset.jnaEditSelector=selectorPath(el);el.dataset.jnaEditable="true"});
   const imgs=[...document.querySelectorAll("main img")];
   imgs.forEach((el,i)=>{el.dataset.jnaImageId=String(i);el.dataset.jnaImageSelector=selectorPath(el);el.dataset.jnaImage="true"});
