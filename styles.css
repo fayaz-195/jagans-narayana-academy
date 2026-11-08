@@ -1335,3 +1335,43 @@ body{color:#17332d;background:#fff}
 .jna-archive-result-area-v2{gap:10px}
 @media(max-width:760px){.jna-category-tabs{max-width:100%;grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:480px){.jna-year-select{gap:8px}.jna-year-tabs button{width:76px;height:35px}.jna-course-heading h2{font-size:21px}.jna-category-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.jna-category-tabs button{height:44px;padding:0 9px;font-size:11px}.jna-course-number{width:22px;height:22px;flex-basis:22px}}
+
+/* Student testimonials page */
+.jna-testimonial-hero{overflow:hidden;background:#063f37;color:#fff}
+.jna-testimonial-hero-inner{display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:40px;min-height:390px;padding-top:55px;padding-bottom:55px}
+.jna-testimonial-eyebrow,.jna-testimonial-heading>div>span,.jna-testimonial-bottom-cta>div>span{color:#ffc49b;font:800 9px "DM Sans";letter-spacing:.2em}
+.jna-testimonial-hero h1{margin:17px 0 14px;color:#fff;font:800 clamp(45px,6vw,72px)/.94 Manrope;letter-spacing:-.075em}
+.jna-testimonial-hero h1 em{color:#f36b12;font-style:normal}
+.jna-testimonial-hero-copy>p{max-width:410px;margin:0;color:#d4e4dd;font:400 14px/1.8 "DM Sans"}
+.jna-testimonial-cta{display:inline-flex;align-items:center;gap:24px;margin-top:24px;padding:12px 17px;border:1px solid #ffffff65;border-radius:4px;color:#fff;font:700 11px "DM Sans";text-decoration:none}
+.jna-testimonial-cta span,.jna-testimonial-bottom-cta a span{color:#ffb17b;font-size:16px}
+.jna-testimonial-hero-art{position:relative;display:grid;place-items:center;min-height:275px}
+.jna-quote-art{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;width:230px;height:230px;padding:28px;border:1px solid #ffffff65;border-radius:50%;background:linear-gradient(145deg,#0b6655,#06463d);box-shadow:0 18px 50px #001e183d}
+.jna-quote-art>span{color:#f36b12;font:800 76px/.7 Georgia}
+.jna-quote-art>b{margin-top:8px;color:#fff;font:800 23px/1.04 Manrope;letter-spacing:-.04em}
+.jna-quote-art>small{margin-top:13px;color:#ffc49b;font:800 7px "DM Sans";letter-spacing:.15em}
+.jna-orbit{position:absolute;width:290px;height:290px;border:1px solid #ffffff30;border-radius:50%}
+.jna-orbit-two{width:345px;height:345px;border-color:#f36b1266}
+.jna-testimonial-content{padding:75px 0 85px;background:linear-gradient(180deg,#f7f9f6,#fff 360px)}
+.jna-testimonial-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:30px}
+.jna-testimonial-heading>div>span{color:#e96b17}
+.jna-testimonial-heading h2{margin:8px 0 0;color:#103f34;font:800 clamp(30px,4vw,44px)/1.03 Manrope;letter-spacing:-.06em}
+.jna-testimonial-heading h2 em{color:#f36b12;font-style:normal}
+.jna-testimonial-heading>p{max-width:430px;margin:0;color:#6d7b73;font:400 12px/1.85 "DM Sans"}
+.jna-testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.jna-voice-card{min-width:0;padding:20px;border:1px solid #e1e9e3;border-radius:8px;background:#fff;box-shadow:0 8px 25px #123d2610}
+.jna-voice-feature{border-top:3px solid #f36b12}
+.jna-voice-top{display:flex;justify-content:space-between;align-items:center;color:#e96b17;font:800 8px "DM Sans";letter-spacing:.14em}
+.jna-voice-icon{color:#f2a16e;font:800 37px/.7 Georgia}
+.jna-voice-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:190px;margin:15px 0;padding:20px;background:#f3f7f3;border:1px dashed #cbd9cf;border-radius:5px;text-align:center}
+.jna-voice-avatar{display:grid;place-items:center;width:64px;height:64px;margin-bottom:13px;border:5px solid #fff;border-radius:50%;background:#dcebe1;color:#075345;font:800 22px Manrope;box-shadow:0 4px 15px #0a49301a}
+.jna-avatar-parent{background:#ffeadb;color:#d65d12}.jna-avatar-journey{background:#e7e9f4;color:#425080}
+.jna-voice-placeholder>b{color:#174538;font:800 13px Manrope}.jna-voice-placeholder>small{margin-top:5px;color:#829087;font:500 9px "DM Sans"}
+.jna-voice-bottom{display:flex;flex-direction:column;gap:6px}.jna-voice-bottom>b{color:#16483b;font:800 9px "DM Sans";letter-spacing:.12em}.jna-voice-bottom>span{color:#88948d;font:500 9px "DM Sans"}
+.jna-testimonial-note{display:flex;align-items:center;gap:20px;margin-top:24px;padding:16px 19px;border-left:3px solid #f36b12;background:#f5f7f3}
+.jna-testimonial-note>span{flex:0 0 auto;color:#e96b17;font:800 9px "DM Sans";letter-spacing:.15em}.jna-testimonial-note>p{margin:0;color:#64736b;font:500 11px/1.7 "DM Sans"}
+.jna-testimonial-bottom-cta{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:55px;padding:28px 32px;border-radius:8px;background:#063f37;color:#fff}
+.jna-testimonial-bottom-cta>div>span{color:#ffc49b}.jna-testimonial-bottom-cta h2{margin:9px 0 0;color:#fff;font:800 clamp(25px,3vw,35px)/1.05 Manrope;letter-spacing:-.05em}
+.jna-testimonial-bottom-cta a{display:inline-flex;align-items:center;gap:20px;padding:12px 16px;border-radius:4px;background:#f36b12;color:#fff;font:800 11px "DM Sans";text-decoration:none}
+@media(max-width:760px){.jna-testimonial-hero-inner{grid-template-columns:1fr;gap:15px;padding-top:42px;padding-bottom:35px}.jna-testimonial-hero-art{min-height:235px}.jna-quote-art{width:190px;height:190px}.jna-quote-art>b{font-size:20px}.jna-orbit{width:240px;height:240px}.jna-orbit-two{width:280px;height:280px}.jna-testimonial-heading{display:block}.jna-testimonial-heading>p{margin-top:14px}.jna-testimonial-grid{grid-template-columns:1fr 1fr}.jna-voice-feature{grid-column:span 2}.jna-testimonial-bottom-cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.jna-testimonial-content{padding:52px 0 60px}.jna-testimonial-grid{grid-template-columns:1fr}.jna-voice-feature{grid-column:auto}.jna-voice-placeholder{min-height:155px}.jna-testimonial-note{display:block}.jna-testimonial-note>p{margin-top:8px}.jna-testimonial-bottom-cta{padding:23px 20px}}
