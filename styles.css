@@ -1778,3 +1778,33 @@ body{color:#17332d;background:#fff}
 .jna-adm-bottom-cta>a{color:#e96b17;font:800 11px "DM Sans";text-decoration:none}
 @media(max-width:850px){.jna-adm-form-layout{grid-template-columns:1fr;gap:30px}.jna-adm-form-copy{position:static}.jna-adm-steps{grid-template-columns:1fr}.jna-adm-section-head{align-items:flex-start;flex-direction:column;gap:8px}}
 @media(max-width:600px){.jna-adm-hero{padding:50px 0}.jna-adm-pathways,.jna-adm-process,.jna-adm-info{padding:55px 0}.jna-adm-course-grid,.jna-adm-info-grid{grid-template-columns:1fr 1fr}.jna-adm-course-grid a{min-height:120px;padding:15px}.jna-adm-course-grid b{font-size:17px}.jna-adm-form-section{padding:55px 0}.jna-adm-form{padding:19px 14px}.jna-adm-fields{grid-template-columns:1fr}.jna-adm-field-wide{grid-column:auto}.jna-adm-form-head{align-items:flex-start;flex-direction:column}.jna-adm-bottom-cta{align-items:flex-start;flex-direction:column}}
+
+/* Global academy visual system: motion, floating contact, decorative artwork */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+main section{position:relative;isolation:isolate}
+main section:not(.page-hero)::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:34px;right:max(2.5vw,18px);width:110px;height:110px;border:1px solid #0a806d12;border-radius:50%;box-shadow:0 0 0 14px #0a806d08,0 0 0 29px #f36b1207;opacity:.65}
+main section:nth-of-type(3n)::before{right:auto;left:max(2.5vw,18px);width:76px;height:76px;border-color:#f36b1220;box-shadow:0 0 0 13px #f36b1208,0 0 0 27px #0a806d07}
+.page-hero,.jna-campus-hero,.jna-adm-hero,.jna-contact-hero{overflow:hidden}
+.page-hero:after,.jna-campus-hero:after,.jna-adm-hero:after,.jna-contact-hero:after{content:"";position:absolute;pointer-events:none;right:-110px;top:-160px;width:420px;height:420px;border:1px solid #0a806d18;border-radius:50%;box-shadow:0 0 0 24px #0a806d08,0 0 0 52px #f36b1207,0 0 0 86px #0a806d05;animation:jna-orbit 24s linear infinite}
+.page-hero>.container,.jna-campus-hero .container,.jna-adm-hero .container,.jna-contact-hero .container{position:relative;z-index:1}
+.btn,.jna-contact-submit,.jna-adm-submit,.jna-footer-form button{transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.btn:hover,.jna-contact-submit:hover,.jna-adm-submit:hover,.jna-footer-form button:hover{transform:translateY(-3px);box-shadow:0 12px 26px #063f3728}
+a,button{ -webkit-tap-highlight-color:transparent}
+.info-card,.jna-update-card,.jna-notice-categories article,.jna-contact-course-grid a,.jna-adm-course-grid a,.jna-adm-info-grid article{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.info-card:hover,.jna-update-card:hover,.jna-notice-categories article:hover,.jna-contact-course-grid a:hover,.jna-adm-course-grid a:hover,.jna-adm-info-grid article:hover{transform:translateY(-5px);box-shadow:0 18px 36px #063f3710;border-color:#e9a16f}
+.jna-floating-contact{position:fixed;z-index:9999;right:24px;bottom:24px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.jna-floating-contact a{position:relative;display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 8px 24px #001f1838;transition:transform .2s ease,box-shadow .2s ease}
+.jna-floating-contact a:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 13px 30px #001f1850}
+.jna-floating-contact svg{width:26px;height:26px;fill:currentColor}
+.jna-floating-contact a span{position:absolute;right:68px;padding:8px 11px;border-radius:4px;background:#063f37;color:#fff;font:700 10px "DM Sans";letter-spacing:.04em;white-space:nowrap;opacity:0;transform:translateX(5px);pointer-events:none;transition:all .2s ease}
+.jna-floating-contact a:hover span{opacity:1;transform:translateX(0)}
+.jna-float-call{background:#f36b12;animation:jna-float-pulse 3.2s ease-in-out infinite}
+.jna-float-whatsapp{background:#20b866;animation:jna-float-pulse 3.2s ease-in-out 1.6s infinite}
+.jna-floating-contact a:focus-visible{outline:3px solid #f5b17f;outline-offset:4px}
+.jna-reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--jna-reveal-delay,0ms)}
+.jna-reveal.jna-is-visible{opacity:1;transform:translateY(0)}
+@keyframes jna-orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes jna-float-pulse{0%,100%{box-shadow:0 8px 24px #001f1838}50%{box-shadow:0 8px 28px #20b86655,0 0 0 8px #20b86612}}
+@media(max-width:600px){.jna-floating-contact{right:14px;bottom:15px;gap:9px}.jna-floating-contact a{width:52px;height:52px}.jna-floating-contact svg{width:23px;height:23px}.jna-floating-contact a span{display:none}main section:not(.page-hero)::before{width:55px;height:55px;top:18px;right:10px;box-shadow:0 0 0 10px #0a806d08}.page-hero:after,.jna-campus-hero:after,.jna-adm-hero:after,.jna-contact-hero:after{width:250px;height:250px;right:-130px;top:-110px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.jna-reveal{opacity:1;transform:none}}
