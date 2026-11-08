@@ -1309,3 +1309,8 @@ body{color:#17332d;background:#fff}
 .jna-results-demo-caption{margin:12px 0 0;text-align:center;color:#7a8980;font:500 10px/1.7 "DM Sans"}
 @media(max-width:700px){.jna-results-banner-inner{grid-template-columns:1fr;gap:18px;padding-top:35px;padding-bottom:30px}.jna-results-banner-art{height:170px}.jna-year-select{flex-direction:column;gap:10px}.jna-course-heading{padding:0 4px}.jna-results-poster-landscape{aspect-ratio:1.15;min-height:0}.jna-landscape-students>div{justify-content:center;padding:7px 4px}.jna-landscape-students b{font-size:7px}}
 @media(max-width:480px){.jna-archive-wrap{padding:35px 0 55px}.jna-archive-heading h2{font-size:34px}.jna-year-tabs button{width:85px}.jna-category-tabs{gap:7px}.jna-category-tabs button{min-width:calc(33.33% - 7px);padding:0 8px;font-size:10px}.jna-results-poster-landscape{aspect-ratio:.98;padding:18px;border-width:5px}.jna-landscape-brand>small{font-size:6px}.jna-landscape-main{margin:28px 0 22px}.jna-landscape-main h2{font-size:39px}.jna-landscape-seal{width:70px;height:70px;font-size:20px}.jna-landscape-students{gap:5px}.jna-landscape-students>div{min-height:46px}.jna-landscape-students i{width:23px;height:23px;flex-basis:23px;font-size:7px}.jna-landscape-students b{font-size:6px}.jna-landscape-footer{font-size:6px}}
+
+/* Single image banner added to Results page; preserve all existing layout */
+.jna-results-photo-banner{width:100%;height:250px;overflow:hidden;background:#073f36}
+.jna-results-photo-banner img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%}
+@media(max-width:650px){.jna-results-photo-banner{height:165px}}
