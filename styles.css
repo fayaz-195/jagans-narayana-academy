@@ -1542,3 +1542,22 @@ body{color:#17332d;background:#fff}
 .jna-faculty-info p{margin:0;color:#75837b;font:400 11px/1.7 "DM Sans"}
 @media(max-width:700px){.jna-faculty-grid{grid-template-columns:1fr 1fr}.jna-faculty-photo{height:220px}}
 @media(max-width:480px){.jna-faculty-grid{grid-template-columns:1fr}.jna-faculty-photo{height:280px}}
+
+/* Gallery page — editorial photo wall */
+.jna-gallery-hero-mosaic{position:relative;display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:150px 150px;gap:9px;transform:rotate(1deg)}
+.jna-gallery-hero-mosaic img{width:100%;height:100%;object-fit:cover;border:4px solid #ffffff;border-radius:5px;box-shadow:0 14px 32px #001e1838}
+.jna-gallery-hero-mosaic img:first-child{grid-row:span 2}
+.jna-gallery-hero-mosaic>span{position:absolute;right:10px;bottom:10px;padding:10px 13px;background:#f36b12;color:#fff;font:800 12px/1.25 Manrope;letter-spacing:.12em;transform:rotate(-2deg)}
+.jna-gallery-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.jna-gallery-filter span{padding:9px 13px;border:1px solid #dce7df;border-radius:3px;color:#47665b;font:800 8px "DM Sans";letter-spacing:.12em}
+.jna-gallery-filter span.active{border-color:#063f37;background:#063f37;color:#fff}
+.jna-gallery-wall{display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-auto-rows:205px;gap:14px}
+.jna-gallery-wall .jna-gallery-tile{min-height:0}
+.jna-gallery-wall .jna-gallery-tile-tall{grid-row:span 2}
+.jna-gallery-wall .jna-gallery-tile-wide{grid-column:span 2}
+.jna-gallery-wall .jna-gallery-tile img{width:100%;height:100%;object-fit:cover}
+.jna-gallery-wall .jna-gallery-tile figcaption{left:16px;right:14px;bottom:14px}
+.jna-gallery-wall .jna-gallery-tile figcaption b{font-size:14px}
+.jna-gallery-wall .jna-gallery-tile figcaption small{font-size:7px}
+@media(max-width:700px){.jna-gallery-hero-mosaic{grid-template-rows:110px 110px;max-width:430px;margin:0 auto}.jna-gallery-wall{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.jna-gallery-wall .jna-gallery-tile-tall{grid-row:span 2}.jna-gallery-wall .jna-gallery-tile-wide{grid-column:span 2}}
+@media(max-width:480px){.jna-gallery-hero-mosaic{grid-template-rows:90px 90px}.jna-gallery-wall{grid-template-columns:1fr;grid-auto-rows:210px}.jna-gallery-wall .jna-gallery-tile-tall{grid-row:auto}.jna-gallery-wall .jna-gallery-tile-wide{grid-column:auto}.jna-gallery-filter{gap:5px}.jna-gallery-filter span{padding:8px 9px;font-size:7px}}
