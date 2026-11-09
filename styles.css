@@ -1839,3 +1839,6 @@ a,button{ -webkit-tap-highlight-color:transparent}
 @media(prefers-reduced-motion:reduce){.jna-art-orbit,.jna-art-book,.jna-art-cap,.jna-art-orbital-dot,.jna-art-glow,.jna-art-spark{animation:none!important}}
 
 .footer-inner .footer-brand{display:flex;align-items:center;flex:0 0 auto;min-width:0;background:#fff;border-radius:10px;padding:7px 10px;overflow:hidden}.footer-inner .footer-brand .brand-logo{display:block;height:54px;width:auto;max-width:280px;object-fit:contain;object-position:left center}@media(max-width:640px){.footer-inner{flex-wrap:wrap;align-items:center}.footer-inner .footer-brand .brand-logo{height:46px;max-width:230px}}
+
+.jna-footer-brand{display:inline-flex;align-items:center;max-width:100%;padding:8px 10px;background:#fff;border-radius:10px;overflow:hidden}.jna-footer-brand .jna-footer-logo{display:block;width:min(100%,300px);height:auto;max-height:92px;object-fit:contain}.jna-footer-brand>span{display:none!important}
+@media(max-width:680px){.jna-footer-brand .jna-footer-logo{width:min(100%,250px);max-height:76px}}
