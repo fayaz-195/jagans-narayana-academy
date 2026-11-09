@@ -308,6 +308,7 @@ if ("IntersectionObserver" in window) {
   const form=oldFooter.querySelector("#jnaFooterEnquiry");
   form?.addEventListener("submit",function(event){
     event.preventDefault();
+    if(typeof gtag==="function")gtag("event","generate_lead",{form_name:"footer_enquiry",method:"whatsapp"});
     const data=new FormData(form);
     const name=String(data.get("name")||"").trim();
     const phone=String(data.get("phone")||"").trim();
