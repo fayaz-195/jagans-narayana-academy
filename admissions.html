@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded",function(){
  form.addEventListener("submit",function(event){
   event.preventDefault();
   if(!form.reportValidity())return;
+  if(typeof gtag==="function")gtag("event","generate_lead",{form_name:"admissions_enquiry",method:"whatsapp"});
   const d=new FormData(form);
   const msg=[
    "Hello Jagan Sir's Narayana Academy. I would like to enquire about admission.",
