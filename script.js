@@ -290,7 +290,7 @@ if ("IntersectionObserver" in window) {
     </div></div>
     <div class="container jna-footer-main">
       <div class="jna-footer-about">
-        <a class="jna-footer-brand" href="index.html"><span>JNA</span><b>JAGAN SIR'S<br><small>NARAYANA ACADEMY</small></b></a>
+        <a class="jna-footer-brand" href="index.html"><img src="jna-logo.png" alt="Jagan Sir’s Narayana Academy" class="jna-footer-logo"></a>
         <p>Focused learning. Strong foundations. Brighter futures. Explore our academic pathways and connect with the academy.</p>
       </div>
       <div class="jna-footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Academy</a><a href="founder.html">Founder</a><a href="faculty.html">Faculty</a><a href="facilities.html">Facilities</a><a href="gallery.html">Gallery</a><a href="news-events.html">News & Events</a><a href="notices.html">Notices</a><a href="contact.html">Contact Us</a></div>
@@ -300,6 +300,7 @@ if ("IntersectionObserver" in window) {
         <a href="tel:+919133444384"><span class="jna-footer-icon">☎</span>+91 91334 44384</a>
         <a href="https://wa.me/919133444384" target="_blank" rel="noopener"><span class="jna-footer-icon">◉</span>WhatsApp the academy</a>
         <a href="contact.html"><span class="jna-footer-icon">↗</span>Contact & directions</a>
+        <a href="mailto:info@jagansiracademy.in"><span class="jna-footer-icon">✉</span>info@jagansiracademy.in</a>
       </div>
     </div>
     <div class="jna-footer-bottom"><div class="container"><span>© <span class="jna-footer-year"></span> Jagan Sir's Narayana Academy. All rights reserved. <span class="jna-footer-credit">Designed by <a href="https://campus-creatives.pages.dev/" target="_blank" rel="noopener">Campus Creatives</a></span></span><div><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div></div></div>`;
